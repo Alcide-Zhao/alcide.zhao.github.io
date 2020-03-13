@@ -12,9 +12,9 @@ Database can be accessed using Python database API (DB-API). Therefore, you can 
 
 ## Terminologies
 
-  - DB-API: The communicator between Python and DBMS
-  - Connection objects: database connections; manage transactions
-  - Cursor objects: database querries
+- DB-API: The communicator between Python and DBMS
+- Connection objects: database connections; manage transactions
+- Cursor objects: database querries
 
 ## basic syntax
 
