@@ -54,18 +54,18 @@ Dcab       ==>       7678
  2.  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
 
 <pre>
->>>	def concat(*args, sep="/"):
+>>>def concat(*args, sep="/"):
 ...		return sep.join(args)
->>>	concat("earth", "mars", "venus")
+>>>concat("earth", "mars", "venus")
 	'earth/mars/venus'
->>>	concat("earth", "mars", "venus", sep=".")
+>>>concat("earth", "mars", "venus", sep=".")
 	'earth.mars.venus'
 </pre>
 
 3. Dictionaries can deliver keyword arguments with the `**` operator.
 <pre>
->>>	d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
-...	parrot(**d)
+>>>d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+...parrot(**d)
 </pre>
 
 4. Small anonymous functions can be created with the `lambda` keyword. They are syntactically restricted to a single expression. Like nested function definitions, lambda functions can reference variables from the containing scope
