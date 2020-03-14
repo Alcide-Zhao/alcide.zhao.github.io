@@ -11,9 +11,9 @@ Below are some notes on Python features accumulated from daily practice.
 
 ## String
 
-   1. `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
-   2. Python strings are immutable. Therefore, assigning to an indexed position in the string results in an error.
-   3. Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with f or F and writing expressions as {expression}.
+- `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
+- Python strings are immutable. Therefore, assigning to an indexed position in the string results in an error.
+- Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with f or F and writing expressions as {expression}.
 <pre>
 >>> year = 2016
 >>> event = 'Referendum'
@@ -31,10 +31,10 @@ Dcab       ==>       7678
 
 
 ## Sequence data
-   - Lists supports concatenation: `squares = [1, 4, 9, 16, 25]; squares+[3,6,7]`
-   - The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved. To add an item to the top of the stack, use `append()`. To retrieve an item from the top of the stack, use `pop()` without an explicit index. 
-   - List Comprehensions provides a concise way to create lists. E.g.,`[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]`
-   - A tuple consists of a number of values separated by commas and parenthesised by round bracket: `t = (12345, 54321, 'hello!)'`. Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking: `x,y,z=t`
+- Lists supports concatenation: `squares = [1, 4, 9, 16, 25]; squares+[3,6,7]`
+- The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved. To add an item to the top of the stack, use `append()`. To retrieve an item from the top of the stack, use `pop()` without an explicit index. 
+- List Comprehensions provides a concise way to create lists. E.g.,`[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]`
+- A tuple consists of a number of values separated by commas and parenthesised by round bracket: `t = (12345, 54321, 'hello!)'`. Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking: `x,y,z=t`
 
 
 ## Functions 
@@ -42,6 +42,7 @@ Dcab       ==>       7678
 - By default, arguments may be passed to a Python function either by position or explicitly by keyword. A function definition may look like:
 	1. Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
 	2. Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
+
 -  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
 
 <pre>
@@ -116,6 +117,7 @@ What is your favorite color?  It is blue.
 >>>if __name__ == "__main__":
 	# do something here, usually call a function in the module
 </pre>
+
 - The `dir()` function can be used to find out wh9ch names a module defies: `import fibo, sys; dir(fibo)`. 
 - If a package’s `__init__.py` code defines a list named `__all__`, it is taken to be the list of module names that should be imported when from package import * is encountered.
 - You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import:
@@ -146,7 +148,7 @@ What is your favorite color?  It is blue.
 ...     raise
 </pre>
 
-- f a `finally` clause is present, the `finally` clause will execute as the last task before the try statement completes. 
+- If a `finally` clause is present, the `finally` clause will execute as the last task before the try statement completes. 
 <pre>
 >>> def divide(x, y):
 ...     try:
