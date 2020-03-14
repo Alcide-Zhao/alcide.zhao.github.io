@@ -39,19 +39,18 @@ Dcab       ==>       7678
 
 ## Functions 
 
- 1. By default, arguments may be passed to a Python function either by position or explicitly by keyword. A function definition may look like:
+- By default, arguments may be passed to a Python function either by position or explicitly by keyword. A function definition may look like:
 <pre>
-	def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
-	  -----------    ----------     ----------
-	    |             |                  |
-	    |        Positional or keyword   |
-	    |                                - Keyword only
-	     -- Positional only
+>>>	def f(pos1, pos2, /, pos_or_kwd, \*, kwd1, kwd2):
+...	  -----------    ----------     ----------
+...	    |             |                  |
+...	    |        Positional or keyword   |
+...	    |                                - Keyword only
+...	     -- Positional only
 </pre>
-   
-    -  Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
-    - Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
- 2.  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
+	1. Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
+	2. Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
+-  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
 
 <pre>
 >>>def concat(*args, sep="/"):
@@ -62,13 +61,13 @@ Dcab       ==>       7678
 	'earth.mars.venus'
 </pre>
 
-3. Dictionaries can deliver keyword arguments with the `**` operator.
+- Dictionaries can deliver keyword arguments with the `**` operator.
 <pre>
 >>>d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
 ...parrot(**d)
 </pre>
 
-4. Small anonymous functions can be created with the `lambda` keyword. They are syntactically restricted to a single expression. Like nested function definitions, lambda functions can reference variables from the containing scope
+- Small anonymous functions can be created with the `lambda` keyword. They are syntactically restricted to a single expression. Like nested function definitions, lambda functions can reference variables from the containing scope
 <pre>
 >>> def make_incrementor(n):
 ...     return lambda x: x + n
@@ -82,7 +81,7 @@ Dcab       ==>       7678
 
 ## Looping
 
-1. When looping through dics, the key and corresponding value can be retrieved at the same time using the `items()` method
+- When looping through dics, the key and corresponding value can be retrieved at the same time using the `items()` method
 <pre>
 >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 >>> for k, v in knights.items():
@@ -92,7 +91,7 @@ gallahad the pure
 robin the brave
 </pre>`
 
-2. When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
+- When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
 <pre>
 >>> for i, v in enumerate(['tic', 'tac', 'toe']):
 ...     print(i, v)
@@ -102,7 +101,7 @@ robin the brave
 2 toe
 </pre>
 
-3. To loop over two or more sequences at the same time, the entries can be paired with the `zip()` function.
+- To loop over two or more sequences at the same time, the entries can be paired with the `zip()` function.
 <pre>
 >>> questions = ['name', 'quest', 'favorite color']
 >>> answers = ['lancelot', 'the holy grail', 'blue']
@@ -114,20 +113,20 @@ What is your quest?  It is the holy grail.
 What is your favorite color?  It is blue.
 </pre>
 
-4. To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the `reversed()` function.
+- To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the `reversed()` function.
 
-5. To loop over a sequence in sorted order, use the `sorted()` function.
+- To loop over a sequence in sorted order, use the `sorted()` function.
 
 ## Modules
 
-1. By adding the following block at the end of the module, you can make the file usable as a script as well as an importable module.
+- By adding the following block at the end of the module, you can make the file usable as a script as well as an importable module.
 <pre>
 >>>if __name__ == "__main__":
 	# do something here, usually call a function in the module
 </pre>
-2. The `dir()` function can be used to find out wh9ch names a module defies: `import fibo, sys; dir(fibo)`. 
-3. If a package’s `__init__.py` code defines a list named `__all__`, it is taken to be the list of module names that should be imported when from package import * is encountered.
-4. You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import:
+- The `dir()` function can be used to find out wh9ch names a module defies: `import fibo, sys; dir(fibo)`. 
+- If a package’s `__init__.py` code defines a list named `__all__`, it is taken to be the list of module names that should be imported when from package import * is encountered.
+- You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import:
 <pre>
 >>>from . import echo
 >>>from .. import formats
@@ -136,7 +135,7 @@ What is your favorite color?  It is blue.
 
 ## Erroes and exceptions
 
-1. A `try` statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. An except clause may name multiple exceptions as a parenthesized tuple, for example:
+- A `try` statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. An except clause may name multiple exceptions as a parenthesized tuple, for example:
 <pre>
 >>> while True:
 ...	try:
@@ -146,7 +145,7 @@ What is your favorite color?  It is blue.
 ...		pass
 </pre>
 
-2. The `raise` statement allows the programmer to force a specified exception to occur.
+- The `raise` statement allows the programmer to force a specified exception to occur.
 <pre>
 >>> try:
 ...     raise NameError('HiThere')
@@ -155,7 +154,7 @@ What is your favorite color?  It is blue.
 ...     raise
 </pre>
 
-3. f a `finally` clause is present, the `finally` clause will execute as the last task before the try statement completes. 
+- f a `finally` clause is present, the `finally` clause will execute as the last task before the try statement completes. 
 <pre>
 >>> def divide(x, y):
 ...     try:
