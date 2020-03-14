@@ -14,20 +14,20 @@ Below are some notes on Python features accumulated from daily practice.
    1. `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
    2. Python strings are immutable. Therefore, assigning to an indexed position in the string results in an error.
    3. Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with f or F and writing expressions as {expression}.
-   <pre>
-	   	>>> year = 2016
-		>>> event = 'Referendum'
-		>>> f'Results of the {year} {event}'
-		'Results of the 2016 Referendum'
-		# assing an integer after the ':' will cause that field to be a minimum number of characters wide. 
-		>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
-		>>> for name, phone in table.items():
-		...     print(f'{name:10} ==> {phone:10d}')
-		...
-		Sjoerd     ==>       4127
-		Jack       ==>       4098
-		Dcab       ==>       7678
-   </pre>
+<pre>
+>>> year = 2016
+>>> event = 'Referendum'
+>>> f'Results of the {year} {event}'
+'Results of the 2016 Referendum'
+# assing an integer after the ':' will cause that field to be a minimum number of characters wide. 
+>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+>>> for name, phone in table.items():
+...     print(f'{name:10} ==> {phone:10d}')
+...
+Sjoerd     ==>       4127
+Jack       ==>       4098
+Dcab       ==>       7678
+</pre>
 
 
 ## Sequence data
@@ -40,80 +40,79 @@ Below are some notes on Python features accumulated from daily practice.
 ## Functions 
 
  1. By default, arguments may be passed to a Python function either by position or explicitly by keyword. A function definition may look like:
-	<pre>
-		def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
-		  -----------    ----------     ----------
-		    |             |                  |
-		    |        Positional or keyword   |
-		    |                                - Keyword only
-		     -- Positional only
-	 </pre>
+<pre>
+	def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+	  -----------    ----------     ----------
+	    |             |                  |
+	    |        Positional or keyword   |
+	    |                                - Keyword only
+	     -- Positional only
+ </pre>
     
     -  Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
     - Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
  
  2.  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
 
-	<pre>
-		def concat(*args, sep="/"):
-			return sep.join(args)
-
-		concat("earth", "mars", "venus")
-		'earth/mars/venus'
-		concat("earth", "mars", "venus", sep=".")
-		'earth.mars.venus'
-	</pre>
+<pre>
+>>>	def concat(*args, sep="/"):
+...		return sep.join(args)
+>>>	concat("earth", "mars", "venus")
+	'earth/mars/venus'
+>>>	concat("earth", "mars", "venus", sep=".")
+	'earth.mars.venus'
+</pre>
 
 3. Dictionaries can deliver keyword arguments with the `**` operator.
-	<pre>
-		d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
-		parrot(**d)
-	</pre>
+<pre>
+>>>	d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+...	parrot(**d)
+</pre>
 
 4. Small anonymous functions can be created with the `lambda` keyword. They are syntactically restricted to a single expression. Like nested function definitions, lambda functions can reference variables from the containing scope
-	<pre>
-		>>> def make_incrementor(n):
-		...     return lambda x: x + n
-		...
-		>>> f = make_incrementor(42)
-		>>> f(0)
-		42
-		>>> f(1)
-		43
-	</pre>
+<pre>
+>>> def make_incrementor(n):
+...     return lambda x: x + n
+...
+>>> f = make_incrementor(42)
+>>> f(0)
+42
+>>> f(1)
+43
+</pre>
 
 ## Looping
 
 1. When looping through dics, the key and corresponding value can be retrieved at the same time using the `items()` method
 <pre>
-	>>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
-	>>> for k, v in knights.items():
-	...     print(k, v)
-	...
-	gallahad the pure
-	robin the brave
+>>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+>>> for k, v in knights.items():
+...     print(k, v)
+...
+gallahad the pure
+robin the brave
 </pre>`
 
 2. When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
 <pre>
-	>>> for i, v in enumerate(['tic', 'tac', 'toe']):
-	...     print(i, v)
-	...
-	0 tic
-	1 tac
-	2 toe
+>>> for i, v in enumerate(['tic', 'tac', 'toe']):
+...     print(i, v)
+...
+0 tic
+1 tac
+2 toe
 </pre>
 
 3. To loop over two or more sequences at the same time, the entries can be paired with the `zip()` function.
 <pre>
-	>>> questions = ['name', 'quest', 'favorite color']
-	>>> answers = ['lancelot', 'the holy grail', 'blue']
-	>>> for q, a in zip(questions, answers):
-	...     print('What is your {0}?  It is {1}.'.format(q, a))
-	...
-	What is your name?  It is lancelot.
-	What is your quest?  It is the holy grail.
-	What is your favorite color?  It is blue.
+>>> questions = ['name', 'quest', 'favorite color']
+>>> answers = ['lancelot', 'the holy grail', 'blue']
+>>> for q, a in zip(questions, answers):
+...     print('What is your {0}?  It is {1}.'.format(q, a))
+...
+What is your name?  It is lancelot.
+What is your quest?  It is the holy grail.
+What is your favorite color?  It is blue.
 </pre>
 
 4. To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the `reversed()` function.
@@ -124,63 +123,63 @@ Below are some notes on Python features accumulated from daily practice.
 
 1. By adding the following block at the end of the module, you can make the file usable as a script as well as an importable module.
 <pre>
-	if __name__ == "__main__":
+>>>if __name__ == "__main__":
 	# do something here, usually call a function in the module
 </pre>
 2. The `dir()` function can be used to find out wh9ch names a module defies: `import fibo, sys; dir(fibo)`. 
 3. If a package’s `__init__.py` code defines a list named `__all__`, it is taken to be the list of module names that should be imported when from package import * is encountered.
 4. You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import:
 <pre>
-	from . import echo
-	from .. import formats
-	from ..filters import equalizer
+>>>from . import echo
+>>>from .. import formats
+>>>from ..filters import equalizer
 </pre>
 
 ## Erroes and exceptions
 
 1. A `try` statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. An except clause may name multiple exceptions as a parenthesized tuple, for example:
 <pre>
-while True:
-	try:
-		x = int(input("Please enter a number: "))
-        break
-	except (RuntimeError, TypeError, NameError):
-		pass
+>>> while True:
+...	try:
+...		x = int(input("Please enter a number: "))
+...       break
+...	except (RuntimeError, TypeError, NameError):
+...		pass
 </pre>
 
 2. The `raise` statement allows the programmer to force a specified exception to occur.
 <pre>
-	>>> try:
-	...     raise NameError('HiThere')
-	... except NameError:
-	...     print('An exception flew by!')
-	...     raise
+>>> try:
+...     raise NameError('HiThere')
+... except NameError:
+...     print('An exception flew by!')
+...     raise
 </pre>
 
 3. f a `finally` clause is present, the `finally` clause will execute as the last task before the try statement completes. 
 <pre>
-	>>> def divide(x, y):
-	...     try:
-	...         result = x / y
-	...     except ZeroDivisionError:
-	...         print("division by zero!")
-	...     else:
-	...         print("result is", result)
-	...     finally:
-	...         print("executing finally clause")
-	...
-	>>> divide(2, 1)
-	result is 2.0
-	executing finally clause
-	>>> divide(2, 0)
-	division by zero!
-	executing finally clause
-	>>> divide("2", "1")
-	executing finally clause
-	Traceback (most recent call last):
-	File "<stdin>", line 1, in <module>
-	File "<stdin>", line 3, in divide
-	TypeError: unsupported operand type(s) for /: 'str' and 'str'
+>>> def divide(x, y):
+...     try:
+...         result = x / y
+...     except ZeroDivisionError:
+...         print("division by zero!")
+...     else:
+...         print("result is", result)
+...     finally:
+...         print("executing finally clause")
+...
+>>> divide(2, 1)
+result is 2.0
+executing finally clause
+>>> divide(2, 0)
+division by zero!
+executing finally clause
+>>> divide("2", "1")
+executing finally clause
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+File "<stdin>", line 3, in divide
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
 </pre>
 
 
