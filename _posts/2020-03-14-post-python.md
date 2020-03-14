@@ -40,14 +40,6 @@ Dcab       ==>       7678
 ## Functions 
 
 - By default, arguments may be passed to a Python function either by position or explicitly by keyword. A function definition may look like:
-<pre>
->>>	def f(pos1, pos2, /, pos_or_kwd, \*, kwd1, kwd2):
-...	  -----------    ----------     ----------
-...	    |             |                  |
-...	    |        Positional or keyword   |
-...	    |                                - Keyword only
-...	     -- Positional only
-</pre>
 	1. Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
 	2. Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
 -  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
