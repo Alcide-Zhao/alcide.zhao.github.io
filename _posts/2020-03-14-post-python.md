@@ -47,11 +47,10 @@ Dcab       ==>       7678
 	    |        Positional or keyword   |
 	    |                                - Keyword only
 	     -- Positional only
- </pre>
-    
+</pre>
+   
     -  Positional-only parameters are placed before a `/`. If so, the parameters' order matters, and the parameters cannot be passed by keyword.
     - Keyword-only parameters are placed after a `*`, and means that the parameters must be passed by keyword argument.
- 
  2.  Arbitrary Argument Lists: A function can be called with an arbitrary number of arguments. These arguments will be wrapped up in a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples). Before the variable number of arguments, zero or more normal arguments may occur.
 
 <pre>
@@ -181,13 +180,3 @@ File "<stdin>", line 1, in <module>
 File "<stdin>", line 3, in divide
 TypeError: unsupported operand type(s) for /: 'str' and 'str'
 </pre>
-
-
-
-
-
-
-
-
-
-
