@@ -3,10 +3,10 @@ title: 'Database and MySQL'
 date: 2020-03-15
 permalink: /posts/2020/03/post-MySQL-db/
 tags:
-	- database
-	- SQL
-	- DBMS
-	- RDBMS
+  - database
+  - SQL
+  - DBMS
+  - RDBMS
 ---
 
 SQL (structured querry language) is a standard language for storing, manipulating and retrieving data in databases.
