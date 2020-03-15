@@ -59,7 +59,7 @@ WHERE [condition]; `
 
 - `Count()` no. of items: `SELECT COUNT(DISTINCT Country) FROM Customers;`; `avg()'` to average over the selected; `sum()` to return the sum of the selected; `MIN()` and `MAX()` to return the the smallest/largest value of the sleceted; 
 
--`Where` to filter records: `SELECT * FROM Customers WHERE Country='Mexico'; `. The following operators can be used in the WHERE clause: `=, !=, >, <, >=, <=, like, not like, between... and..., in, not in, and, or, not, is null, is not null`
+- `Where` to filter records: `SELECT * FROM Customers WHERE Country='Mexico'; `. The following operators can be used in the WHERE clause: `=, !=, >, <, >=, <=, like, not like, between... and..., in, not in, and, or, not, is null, is not null`
 
 - `order by` to sort results in `ascending(asc)` or `desceding(desc)` order.  Can be ordered by several column: `SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;`
 
@@ -107,7 +107,7 @@ SELECT column_name(s) FROM table2;
 
 - `GROUP BY` statement to groups rows that have the same values into summary rows. The GROUP BY statement is often used with aggregate functions (`COUNT, MAX, MIN, SUM, AVG`) to group the result-set by one or more columns.
 
-- 'having' statement was added to SQL because the WHERE keyword could not be used with aggregate functions.
+- `HAVING` statement was added to SQL because the WHERE keyword could not be used with aggregate functions.
 <pre>
 SELECT [column_name(s)]
 FROM [table_name]
@@ -123,7 +123,7 @@ SELECT column_name(s)
 FROM table_name
 WHERE EXISTS
 (SELECT column_name FROM table_name WHERE condition); 
-
+</pre>
 - The `ANY` and `ALL` operators are used with a `WHERE` or `HAVING` clause.
 
 - The `SELECT INTO` statement copies data from one table into a new table [in the other database], you can change the column names in the new table using the `as` operator
