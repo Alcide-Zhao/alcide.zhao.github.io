@@ -1,5 +1,5 @@
 ---
-title: 'Notes on Python'
+title: 'Python basics'
 date: 2020-03-14
 permalink: /posts/2020/03/post-python/
 tags:
@@ -13,7 +13,7 @@ Below are some notes on Python features accumulated from daily practice.
 
 - `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
 - Python strings are immutable. Therefore, assigning to an indexed position in the string results in an error.
-- Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with f or F and writing expressions as {expression}.
+- Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with `f` or `F` and writing expressions as `{expression}`.
 <pre>
 >>> year = 2016
 >>> event = 'Referendum'
@@ -176,11 +176,11 @@ TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
 ## Standard Library
 
-1.  Operating System Interface. `os.getcwd()` return current working directory; `os.chdir('/server/accesslogs')` change to directory; `os.system('pwd')` run command line operations. 
+- Operating System Interface. `os.getcwd()` return current working directory; `os.chdir('/server/accesslogs')` change to directory; `os.system('pwd')` run command line operations. 
 
-2. The `glob` module provides a function for making file lists from directory wildcard searches: `glob.glob(*.py)`
+- The `glob` module provides a function for making file lists from directory wildcard searches: `glob.glob(*.py)`
 
-3. Command line arguments. 
+- Command line arguments. 
 <pre>
 >>> python demo.py one two three
 >>> import sys
@@ -188,28 +188,7 @@ TypeError: unsupported operand type(s) for /: 'str' and 'str'
 ['demo.py', 'one', 'two', 'three']
 </pre>
 
-4. Use `pprint` to print prettier
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Use `pprint` to print prettier
 
 
 
