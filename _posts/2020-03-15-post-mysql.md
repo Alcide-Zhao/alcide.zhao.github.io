@@ -15,7 +15,7 @@ SQL (structured querry language) is a standard language for storing, manipulatin
 
 [SQL keywords](https://www.w3schools.com/sql/sql_ref_keywords.asp)&emsp;&emsp;[String, numeric and date function](https://www.w3schools.com/sql/sql_ref_mysql.asp)&emsp;&emsp;[server function](https://www.w3schools.com/sql/sql_ref_sqlserver.asps)&emsp;&emsp;[Operators](https://www.w3schools.com/sql/sql_operators.asp)&emsp;&emsp; [Data types](https://www.w3schools.com/sql/sql_datatypes.asp)
 
-## Database 
+## Database manipulation
 
 - List existing databases: `show databases`
 - Create database: `create database [db_name]`
