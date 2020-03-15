@@ -1,6 +1,6 @@
 ---
 title: 'Database and MySQL'
-date: 2019-10-15
+date: 2019-10-01
 permalink: /posts/2019/10/post-MySQL-db/
 tags:
   - database
