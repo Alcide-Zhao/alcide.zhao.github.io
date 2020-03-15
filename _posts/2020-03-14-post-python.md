@@ -171,3 +171,45 @@ executing finally clause
 Traceback (most recent call last):
 TypeError: unsupported operand type(s) for /: 'str' and 'str'
 </pre>
+
+
+
+## Standard Library
+
+1.  Operating System Interface. `os.getcwd()` return current working directory; `os.chdir('/server/accesslogs')` change to directory; `os.system('pwd')` run command line operations. 
+
+2. The `glob` module provides a function for making file lists from directory wildcard searches: `glob.glob(*.py)`
+
+3. Command line arguments. 
+<pre>
+>>> python demo.py one two three
+>>> import sys
+>>> print(sys.argv)
+['demo.py', 'one', 'two', 'three']
+</pre>
+
+4. Use `pprint` to print prettier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
