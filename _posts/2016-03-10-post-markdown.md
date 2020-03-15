@@ -1,7 +1,7 @@
 ---
 title: 'Some quick notes on using markdown'
-date: 2020-03-10
-permalink: /posts/2020/03/post-markdown/
+date: 2019-06-02
+permalink: /posts/2019/06/post-markdown/
 tags:
   - markdown
   - editting
