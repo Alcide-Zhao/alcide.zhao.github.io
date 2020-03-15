@@ -40,7 +40,7 @@ CREATE TABLE tb_name (
   6. `DEFAULT`to provide a default value for a column
   7. `Auto-increment` allows a unique number to be generated automatically when a new record is inserted into a table.
 
-- `drop` table statement: `drop table [tb_name]`
+- `DROP` table statement: `drop table [tb_name]`
 - `INSERT INTO` table statement: `INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');`
 - `UPDATE` table statement: `UPDATE [tb_name]
