@@ -9,6 +9,7 @@ tags:
 ---
 Below are some notes on Python features accumulated from daily practice.
 
+
 ## String
 
 - `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
@@ -105,6 +106,7 @@ Dcab       ==>       7678
 gallahad the pure
 robin the brave
 </pre>`
+
 
 - When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
 <pre>
