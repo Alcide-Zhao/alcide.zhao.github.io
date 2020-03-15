@@ -12,9 +12,11 @@ tags:
 SQL (structured querry language) is a standard language for storing, manipulating and retrieving data in databases.
 
 **Some quick reference pages**
-[SQL keywords](https://www.w3schools.com/sql/sql_ref_keywords.asp)&emsp;[String, numeric and date function](https://www.w3schools.com/sql/sql_ref_mysql.asp)&emsp;[server function](https://www.w3schools.com/sql/sql_ref_sqlserver.asps)&emsp;[Operators](https://www.w3schools.com/sql/sql_operators.asp)&emsp;Data types](https://www.w3schools.com/sql/sql_datatypes.asp)
+
+[SQL keywords](https://www.w3schools.com/sql/sql_ref_keywords.asp)&emsp;&emsp;[String, numeric and date function](https://www.w3schools.com/sql/sql_ref_mysql.asp)&emsp;&emsp;[server function](https://www.w3schools.com/sql/sql_ref_sqlserver.asps)&emsp;&emsp;[Operators](https://www.w3schools.com/sql/sql_operators.asp)&emsp;&emsp; [Data types](https://www.w3schools.com/sql/sql_datatypes.asp)
 
 ## Database 
+
 - List existing databases: `show databases`
 - Create database: `create database [db_name]`
 - Delete database: `drop [db_name]`
@@ -23,7 +25,15 @@ SQL (structured querry language) is a standard language for storing, manipulatin
 - backup database: `BACKUP DATABASE [db_name] TO DISK = 'filepath'; `. A differential back up only backs up the parts of the database that have changed since the last full database backup: `BACKUP DATABASE databasename TO DISK = 'filepath' WITH DIFFERENTIAL;`
 
 ## Table manipulation
+
 - `create` table statement: `create table [tb_name] (*argv);`
+    1. `NOT NULL ` to enforces a column to NOT accept NULL values;
+    2. `NIQUE` constraint ensures that all values in a column are different.
+    3. `PRIMARY KEY` uniquely identifies each record in a table.
+    4. `FOREIGN KEY`  to link two tables together: `FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)`
+    5. `CHECK` constraint is used to limit the value range that can be placed in a column: ` CHECK (Age>=18)`
+    6. `DEFAULT`to provide a default value for a column
+    7. `Auto-increment` allows a unique number to be generated automatically when a new record is inserted into a table.
 <pre>
 CREATE TABLE tb_name (
     column1 datatype,
@@ -32,13 +42,6 @@ CREATE TABLE tb_name (
    ....
 ); 
 </pre>
-  1. `NOT NULL ` to enforces a column to NOT accept NULL values;
-  2. `NIQUE` constraint ensures that all values in a column are different.
-  3. `PRIMARY KEY` uniquely identifies each record in a table.
-  4. `FOREIGN KEY`  to link two tables together: `FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)`
-  5. `CHECK` constraint is used to limit the value range that can be placed in a column: ` CHECK (Age>=18)`
-  6. `DEFAULT`to provide a default value for a column
-  7. `Auto-increment` allows a unique number to be generated automatically when a new record is inserted into a table.
 
 - `DROP` table statement: `drop table [tb_name]`
 - `INSERT INTO` table statement: `INSERT INTO Customers (CustomerName, City, Country)
@@ -46,10 +49,9 @@ VALUES ('Cardinal', 'Stavanger', 'Norway');`
 - `UPDATE` table statement: `UPDATE [tb_name]
 SET [column1] = [value1, column2 = value2, ...]
 WHERE [condition]; `
-- `delete from ` table statement: `DELETE FROM [tb_name] WHERE [condition];`
+- `DELETE FROM` table statement: `DELETE FROM [tb_name] WHERE [condition];`
 - To add a column in a table: `ALTER TABLE table_name ADD column_name datatype; `; To delete a column in a table: `ALTER TABLE table_name DROP COLUMN column_name; `
 
-	
 
 ## Table query
 
@@ -173,6 +175,7 @@ EXEC SelectAllCustomers @City = "London", @PostalCode = "WA1 1DP";
 </pre>
 
 ## Comments
+
 The comments may depend on which SQL drive you use.  
 - single Line Comments with `--`
 - Block comments start with `/*` and end with `*/`.
