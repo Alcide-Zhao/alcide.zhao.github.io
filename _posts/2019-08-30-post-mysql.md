@@ -1,7 +1,7 @@
 ---
 title: 'Database and MySQL'
-date: 2019-08-30
-permalink: /posts/2019/08/post-MySQL-db/
+date: 2020-03-15
+permalink: /posts/2020/03/post-MySQL-db/
 tags:
 	- database
 	- SQL
