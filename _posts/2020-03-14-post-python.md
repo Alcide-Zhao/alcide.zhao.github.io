@@ -13,6 +13,7 @@ Below are some notes on Python features accumulated from daily practice.
 
 - `\` can be used to escape quotes; `"\"Yes,\" they said."`. By adding an `r` before the first quote, characters prefaced by `\` will not be be interpreted as special characters.
 - Python strings are immutable. Therefore, assigning to an indexed position in the string results in an error.
+- To remove spaces remove any whitespace from both the beginning and the end of a string: `srtip()`
 - Formatted string literals let you include the value of Python expressions inside a string by prefixing the string with `f` or `F` and writing expressions as `{expression}`.
 <pre>
 >>> year = 2016
