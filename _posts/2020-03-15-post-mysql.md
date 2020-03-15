@@ -3,16 +3,16 @@ title: 'Database and MySQL'
 date: 2020-03-15
 permalink: /posts/2020/03/post-MySQL-db/
 tags:
-	- database
-	- SQL
-	- DBMS
-	- RDBMS
+  - database
+  - SQL
+  - DBMS
+  - RDBMS
 ---
 
 SQL (structured querry language) is a standard language for storing, manipulating and retrieving data in databases.
 
 **Some quick reference pages**
-[SQL keywords](https://www.w3schools.com/sql/sql_ref_keywords.asp)   [String, numeric and date function](https://www.w3schools.com/sql/sql_ref_mysql.asp)   [server function](https://www.w3schools.com/sql/sql_ref_sqlserver.asps)   [Operators](https://www.w3schools.com/sql/sql_operators.asp)   [Data types](https://www.w3schools.com/sql/sql_datatypes.asp)
+[SQL keywords](https://www.w3schools.com/sql/sql_ref_keywords.asp)&emsp;[String, numeric and date function](https://www.w3schools.com/sql/sql_ref_mysql.asp)&emsp;[server function](https://www.w3schools.com/sql/sql_ref_sqlserver.asps)&emsp;[Operators](https://www.w3schools.com/sql/sql_operators.asp)&emsp;Data types](https://www.w3schools.com/sql/sql_datatypes.asp)
 
 ## Database 
 - List existing databases: `show databases`
