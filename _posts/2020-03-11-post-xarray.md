@@ -24,8 +24,9 @@ Whatsoever, let's start !
 ## 0. Data structure
 **Xarray is just a dic-like N-D generalisation of pandas.series!**
 
-- *DataArray*: An N-D generalization of a pandas.Series.
-- *Dataset*: A dict-like collection of DataArray objects with aligned dimensions (like a necdf file).
+*DataArray*: An N-D generalization of a pandas.Series.
+
+*Dataset*: A dict-like collection of DataArray objects with aligned dimensions (like a necdf file).
 
 ### DataArray
 
@@ -84,12 +85,12 @@ Dataarray can be indexed as in numpy. However, we want to meke use of the advant
 Like pandas, label based indexing in xarray is inclusive of both the start and stop bounds.
 
 <pre>
-  ds['temperature'].loc[-99.79,42.63,'2000-01-01':'2000-01-02']
-  # index by integer array indices
-  da.isel(space=0, time=slice(None, 2))
+ds['temperature'].loc[-99.79,42.63,'2000-01-01':'2000-01-02']
+# index by integer array indices
+da.isel(space=0, time=slice(None, 2))
 
-  # index by dimension coordinate labels
-  da.sel(time=slice('2000-01-01', '2000-01-02'))
+# index by dimension coordinate labels
+da.sel(time=slice('2000-01-01', '2000-01-02'))
 </pre>
 
 - We can index all variables in a dataset simultaneously, returning a new dataset:

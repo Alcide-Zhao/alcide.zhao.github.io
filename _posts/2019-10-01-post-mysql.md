@@ -173,13 +173,13 @@ EXEC procedure_name;
 
 Stored Procedure With Parameters
 <pre>
--- Tcreates a stored procedure that selects Customers from a particular City with a particular PostalCode from the "Customers" table 
+/* Tcreates a stored procedure that selects Customers from a particular City with a particular PostalCode from the "Customers" table  */
 CREATE PROCEDURE SelectAllCustomers @City varchar(30), @PostalCode varchar(10)
 AS
 SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
 GO;
 
--- Execute the stored procedure above as follows:
+/* Execute the stored procedure above as follows */
 EXEC SelectAllCustomers @City = "London", @PostalCode = "WA1 1DP"; 
 </pre>
 
