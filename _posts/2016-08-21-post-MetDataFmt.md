@@ -88,5 +88,78 @@ The Binary Universal Form for the Representation of meteorological data (BUFR) i
 
 
 ## GeoTIFF
+A GeoTIFF  is a public domain metadata standard which has the **georeferencing information** embedded within the image file so there is no accompany .tfw file needed.  The georeferencing information is included by way of tif tags that contains spatial information about the image file such as `map projection, coordinate systems, ellipsoids, datums`.  
 
-## NetCDF
+Open GeoTIFF with the GDAL in rasterio
+<pre>	
+>>> import rasterio
+###  Open file
+>>> dataset = rasterio.open('example.tif')
+
+# Data shape
+>>> dataset.width
+7731
+>>> dataset.height
+7871
+
+# Some dataset attributes expose the properties of all dataset bands via a tuple of values, one per band. To get a mapping of band indexes to variable data types, apply a dictionary comprehension to the zip() product of a dataset’s indexes and dtypes attributes.
+>>> {i: dtype for i, dtype in zip(dataset.indexes, dataset.dtypes)}
+{1: 'uint16'}
+
+# The spatial position of the upper left corner
+>>> dataset.transform * (0, 0)
+
+# The lower right corner:
+dataset.transform * (dataset.width, dataset.height)
+
+# These coordinate values are relative to the origin of the dataset’s coordinate reference system (CRS).
+>>> dataset.rcs   # reference coordinate system
+CRS.from_epsg(32612)  # The upper left corner of the example dataset, (358485.0, 4265115.0), is 141.5 kilometers west of zone 12’s central meridian (111 degrees west) and 4265 kilometers north of the equator.
+
+# Data from a raster band can be accessed by the band’s index number. 
+>>> dataset.indexes
+(1,)
+>>> band1 = dataset.read(1
+>>> band1
+array([[0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       ...,
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0]], dtype=uint16
+
+# Datasets have an index() method for getting the array indices corresponding to points in georeferenced space.
+>>> x, y = (dataset.bounds.left + 100000, dataset.bounds.top - 50000)
+>>> row, col = dataset.index(x, y)
+>>> row, col
+(1666, 3333)
+>>> band1[row, col]
+7566
+
+### To save array along with georeferencing information to a new raster data file, call rasterio.open() with a path to the new file to be created, 'w' to specify writing mode, and several keyword arguments.
+>>> new_dataset = rasterio.open(
+...     '/tmp/new.tif',   # file_name
+...     'w',              
+...     driver='GTiff',   # desired format driver
+...     height=Z.shape[0], 
+...     width=Z.shape[1],
+...     count=1,          # a count of the dataset bands
+...     dtype=Z.dtype,
+...     crs='+proj=latlong',
+...     transform=transform,
+... )
+# To copy the grid to the opened dataset, call the new dataset’s write() method with the grid and target band number as arguments.
+>>> new_dataset.write(Z, 1)
+# sync data to disk and finish
+>>> new_dataset.close()
+
+ </pre>
+
+## Shapefile
+
+
+
+
+
+
