@@ -4,12 +4,12 @@ date: 2016-08-21
 permalink: /posts/2016/08/post-MetDataFmt/
 tags:
   - meterology
-  - File
   - data
   - GRIB
   - netcdf
   - BUFR
   - GeoTIFF
+  - HDF5
 ---
 
 Some commonly used filr format for oceanic and atmospheric sciences: definition, manipulation, and analysis
