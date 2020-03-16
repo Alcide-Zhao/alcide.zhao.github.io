@@ -186,7 +186,9 @@ EXEC SelectAllCustomers @City = "London", @PostalCode = "WA1 1DP";
 ## Comments
 
 The comments may depend on which SQL drive you use.  
+
 Single Line Comments with `--`
+
 Block comments start with `/*` and end with `*/`.
 
 ## SQL Dates
