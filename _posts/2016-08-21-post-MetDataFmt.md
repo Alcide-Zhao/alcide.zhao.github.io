@@ -82,11 +82,6 @@ lats.max(), lons.shape, lons.min(), lons.max()
 </pre>
 
 
-## BUFR
-
-The Binary Universal Form for the Representation of meteorological data (BUFR) is a binary data format maintained by the World Meteorological Organization (WMO). 
-
-
 ## GeoTIFF
 
 A GeoTIFF  is a public domain metadata standard which has the **georeferencing information** embedded within the image file so there is no accompany .tfw file needed.  The georeferencing information is included by way of tif tags that contains spatial information about the image file such as `map projection, coordinate systems, ellipsoids, datums`.  
@@ -157,10 +152,22 @@ array([[0, 0, 0, ..., 0, 0, 0],
 >>> new_dataset.close()
 </pre>
 
+
+## HDF5
+
+The Hierarchical Data Format version 5 (HDF5), is an open source file format that supports large, complex, heterogeneous data. HDF5 uses a "file directory" like structure that allows you to organize data within the file in many different structured ways, as you might do with files on your computer. 
+
+in a HDF5 file, what we call "directories" or " folders" on our computers, are called `groups` and what we call files on our computer are called `datasets`.
+
+
 ## Shapefile
+
 A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas).
 
-!!! To be finished
+
+## BUFR
+
+The Binary Universal Form for the Representation of meteorological data (BUFR) is a binary data format maintained by the World Meteorological Organization (WMO). 
 
 
 
