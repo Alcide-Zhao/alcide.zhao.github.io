@@ -33,7 +33,7 @@ import pygrib
 3:Maximum temperature:K (instant):regular_gg:heightAboveGround:level 2 m:fcst time 108-120 hrs:from 200402291200
 4:Minimum temperature:K (instant):regular_gg:heightAboveGround:level 2 m:fcst time 108-120 hrs:from 200402291200
 
-# ind the first grib message with a matching name: 
+# Find the first grib message with a matching name: 
 
 >>> grb = grbs.select(name='Maximum temperature')[0]
 
@@ -88,9 +88,11 @@ The Binary Universal Form for the Representation of meteorological data (BUFR) i
 
 
 ## GeoTIFF
+
 A GeoTIFF  is a public domain metadata standard which has the **georeferencing information** embedded within the image file so there is no accompany .tfw file needed.  The georeferencing information is included by way of tif tags that contains spatial information about the image file such as `map projection, coordinate systems, ellipsoids, datums`.  
 
 Open GeoTIFF with the GDAL in rasterio
+
 <pre>	
 >>> import rasterio
 ###  Open file
@@ -153,9 +155,13 @@ array([[0, 0, 0, ..., 0, 0, 0],
 >>> new_dataset.write(Z, 1)
 # sync data to disk and finish
 >>> new_dataset.close()
- </pre>
+</pre>
 
 ## Shapefile
+A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas).
+
+!!! To be finished
+
 
 
 
