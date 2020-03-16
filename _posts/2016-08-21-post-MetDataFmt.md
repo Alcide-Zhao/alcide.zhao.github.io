@@ -153,7 +153,6 @@ array([[0, 0, 0, ..., 0, 0, 0],
 >>> new_dataset.write(Z, 1)
 # sync data to disk and finish
 >>> new_dataset.close()
-
  </pre>
 
 ## Shapefile
