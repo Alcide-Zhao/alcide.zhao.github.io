@@ -80,3 +80,13 @@ lats.max(), lons.shape, lons.min(), lons.max()
 >>> pygrib.open('test.grb').readline() 
 1:Surface pressure:Pa (instant):regular_gg:surface:level 0:fcst time 240 hrs:from 201001011200
 </pre>
+
+
+## BUFR
+
+The Binary Universal Form for the Representation of meteorological data (BUFR) is a binary data format maintained by the World Meteorological Organization (WMO). 
+
+
+## GeoTIFF
+
+## NetCDF
