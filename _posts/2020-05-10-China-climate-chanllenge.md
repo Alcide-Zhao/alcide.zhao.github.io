@@ -25,14 +25,14 @@ Apart from authority issues, county-level environmental policy implementation is
 
 Serious environmental information asymmetries exist widely between policy implementers, governments, public and enterprises form the other key obstacle for policy implementation. This is manifested, for example, by distorted and contradicted data reported by different sources, and has serious impacts on the central government's environmental decision-making. Meanwhile, transparency issues in data reporting and administration make public engagement extremely challenging. 
 
-##China’s carbon market is far way to grow up
+## China’s carbon market is far way to grow up
 In order to further reduce emissions, China launched its National Trading Program in 2017. The plan is to conduct spot trading in power generation sectors and then gradually expand to other sectors and trading types in 2020. However, its infant carbon market has a great number of problems and challenges. Below summarises a few according to recent research:
 
-•	China's carbon market adopts a two-level management system from the central government to local governments. The local governments tend to excessively allocate their quota determined by the central government. Excess quotas and insufficient demand lead to variable carbon prices, weakening the role of carbon prices in guiding mitigation.
-•	The ambiguous and incomplete top-down design of the carbon market results into poor coordination among functional departments and many other related units.
-•	The incomplete Measurement, Reporting and Verification (MRV) system allows local governments to foster local MRV agencies that have complex interest links with local governments and enterprises, questioning the independency, authenticity and quality of their reported data. 
-•	Because of limited and unenthusiastic market participants and lack of innovation in the fiscal system, the carbon market vitality is very low, which leads to poor market liquidity and low transaction volume and turnover. 
-•	Uneven regional development and imbalanced industries pose great challenges. For example, underdeveloped regions need room for its economic development in the expense of carbon emission, otherwise it will exacerbate the already uneven regional development.
+- China's carbon market adopts a two-level management system from the central government to local governments. The local governments tend to excessively allocate their quota determined by the central government. Excess quotas and insufficient demand lead to variable carbon prices, weakening the role of carbon prices in guiding mitigation.
+- The ambiguous and incomplete top-down design of the carbon market results into poor coordination among functional departments and many other related units.
+- The incomplete Measurement, Reporting and Verification (MRV) system allows local governments to foster local MRV agencies that have complex interest links with local governments and enterprises, questioning the independency, authenticity and quality of their reported data. 
+- Because of limited and unenthusiastic market participants and lack of innovation in the fiscal system, the carbon market vitality is very low, which leads to poor market liquidity and low transaction volume and turnover. 
+- Uneven regional development and imbalanced industries pose great challenges. For example, underdeveloped regions need room for its economic development in the expense of carbon emission, otherwise it will exacerbate the already uneven regional development.
 
 ## Local governments’ play in the principle-agent game
 The rapid economic growth of China is largely driven by local governments’ pursuit of GDP and the fiscal revenue it brings. Whether climate change policies are compatible with local governments’ incentives is the key to their effectiveness. As such, local governments play tactfully in the complex and complicated principle-agent games.
