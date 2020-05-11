@@ -1,7 +1,7 @@
 ---
 title: 'Factors constraining China’s commitment to mitigating climate change'
 date: 2020-05-10
-permalink: /posts/2020/03/post-SQL-py/
+permalink: /posts/2020/05/post-cc-China/
 tags:
   - Climate change
   - Low carbon
