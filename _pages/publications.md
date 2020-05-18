@@ -15,7 +15,7 @@ sidebar:
 In preparation
 ======
 ------
-**Zhao A.** et, The East-West divide in global air pollution: drivers and impacts, aiming at **Nature**.  <br/><br/>
+**Zhao A.** et, The East-West divide in global air pollution: drivers and impacts <br/><br/>
 Pandey, A.K., Stevenson, D.S., **Zhao, A**., et al., Evaluating Nitrogen dioxide in UKCA using OMI satellite retrievals over South and East Asia, aiming at **Atmospheric Chemistry and Physics**. <br/><br/>
 
 In review
