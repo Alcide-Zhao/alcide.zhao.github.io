@@ -16,6 +16,23 @@ redirect_from:
 ## The best moments of reading are, when you come across with something, a thought, a feeling, a way of looking at your life, that you would thought special, particular to you, while here it is, set down by someone else. A person you never met, a person who may long dead. And, it is as if a hand has come out and taken yours. By the end of the story, it is like seeing a bunch of friends away, and when you ask if they will come back again, they would say yes and no.
 {: .notice--danger}
 
+
+ACADEMIC WORK EXPERIENCE
+======
+------
+2020.07-present&emsp;Research Scientist at National Center for Atmospheric Research and University of Reading<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;Project: DAHLIA: Dust-AtmospHere-Land Interactions in East Asia (Newton Fund)<br/>
+2019.09-2020.03&emsp;Postdoctoral researcher at The University of Edinburgh<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;Project: ENSO and Asian monsoon and climate teleconnections<br/>
+2019.06-present&emsp;Lead analyst/author<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;The AerChemMIP joint analysis on atmospheric oxidising capability for IPCC AR6<br/>
+2018.04-present&emsp;Research projects co-mentor at school of GeoSciences, The University of Edinburgh<br/>
+&emsp;&emsp;&emsp;&emsp; &emsp;Marina Sanchez-Oro Ruiz (MSc thesis); Minjia Zhu (MSc thesis); Matthew Karmer (Honours degree);+-<br/>
+2017.01-2019.08&emsp;Tutor at The University of Edinburgh<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
+
+
 EDUCATION
 ======
 ------
@@ -29,25 +46,12 @@ EDUCATION
 &emsp;&emsp;&emsp;&emsp;&emsp;BSc in Oceanography (GPA: 89.6)<br/>
 
 
-ACADEMIC EXPERIENCE
-======
-------
-2019.09-2020.03&emsp;Postdoctoral researcher at The University of Edinburgh<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Project: ENSO and Asian monsoon and climate teleconnections<br/>
-2019.06-present&emsp;Lead analyst/author<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;The AerChemMIP joint analysis on atmospheric oxidising capability for IPCC AR6<br/>
-2018.04-present&emsp;Research projects co-mentor at school of GeoSciences, The University of Edinburgh<br/>
-&emsp;&emsp;&emsp;&emsp; &emsp;Marina Sanchez-Oro Ruiz (MSc thesis); Minjia Zhu (MSc thesis); Matthew Karmer (Honours degree);+-<br/>
-2017.01-2019.08&emsp;Tutor at The University of Edinburgh<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
-
 CURRENT RESEARCH FOCUSES
 ======
 ------
 -	Climate forcing and response to short-lived climate forcers vs. greenhouse gases<br/>
 -	Aerosol-cloud-radiation interactions, their uncertainties and associated implications for climate extremes<br/>
--	Atmospheric methane and oxidising capability<br/>
+-   Dust and theri interactions with cloud and land surface
 
 PEER-REVIEWER
 ======
