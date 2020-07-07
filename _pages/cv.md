@@ -51,7 +51,9 @@ CURRENT RESEARCH FOCUSES
 ------
 -	Climate forcing and response to short-lived climate forcers vs. greenhouse gases<br/>
 -	Aerosol-cloud-radiation interactions, their uncertainties and associated implications for climate extremes<br/>
--   Dust and theri interactions with cloud and land surface
+-   Dust cycles: interactions with clouds and land surface in present generation climate models<br/>
+-   Climate extremes: from past to future; drivers, mechanisms, and impacts<br/>
+
 
 PEER-REVIEWER
 ======
@@ -70,6 +72,7 @@ INVITED-TALKS
 -	“Climate response in equilibrium in CESM1” at the 23rd Annual CESM Workshop, Boulder, CO, USA, 2018.06<br/>
 -	“Future aerosol mitigations and Asian precipitation extremes” at the 3rd ACAM conference, Guangzhou, China, 2017.06<br/>
 
+<!-- 
 SKILLS
 ======
 ------
@@ -89,3 +92,4 @@ SERVICE AND LEADERSHIPS
 ______
 - 2010.09-2012.06 Member and the chair, The Light of Information Volunteer Association
 - 2014.09-2016.08 Chiar of 2014 Postgraduate Student Class, Department of Marine Technology, OUC
+ -->
