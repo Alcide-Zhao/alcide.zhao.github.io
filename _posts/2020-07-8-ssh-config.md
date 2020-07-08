@@ -26,18 +26,18 @@ if you put this ito your `~/.ssh/config`, you can simply connect to HPC1 by `$ s
 ### To make global configurations
 <pre>
 Host *
-    ServerAliveInterval 30
-    ServerAliveCountMax 3
-    # you might need to create the directory ~/.ssh/controlmasters/
-    ControlPath ~/.ssh/controlmasters/%r@%h:%p
-    ControlMaster auto
-    ControlPersist yes
-    # allow x forwarding to interact with GUI windows
-    ForwardX11 yes
-    ForwardAgent yes
-    ForwardX11Trusted yes
-    #AllowTcpForwarding yes
-    #GatewayPorts yes
+	ServerAliveInterval 30
+	ServerAliveCountMax 3
+	# you might need to create the directory ~/.ssh/controlmasters/
+	ControlPath ~/.ssh/controlmasters/%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	# allow x forwarding to interact with GUI windows
+	ForwardX11 yes
+	ForwardAgent yes
+	ForwardX11Trusted yes
+	#AllowTcpForwarding yes
+	#GatewayPorts yes
 </pre>
 The above will apply to all of your hosts in your `~/.ssh/config` file.
 
