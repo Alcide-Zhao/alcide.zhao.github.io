@@ -20,6 +20,7 @@ Host HPC1
 	Port 2222
 	User HPC1_user_ID
 </pre>>
+
 if you put this ito your `~/.ssh/config`, you can simply connect to HPC1 by `$ ssh HPC1`.
 
 ### To make global configurations
@@ -70,8 +71,8 @@ Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as
 - Step 4: 
 	On your local computer, load the copied private key to ssh-agent:
 	<pre>
-		$ eval $(ssh-agent -s)
-		$ ssh-add ~/.ssh/id_rsa_jasmin
+	$ eval $(ssh-agent -s)
+	$ ssh-add ~/.ssh/id_rsa_jasmin
 	</pre>
 	And then, on your local computer, ssh to HPC2 by `ssh HPC2`
 	
