@@ -42,13 +42,13 @@ Host *
 The above will apply to all of your hosts in your `~/.ssh/config` file.
 
 
-### Jump using Proxy Jump
+### Jump using ProxyJump
 Now, suppose you need to conenct to HPC2. However, you are not allowed to do that from your local computer directly. Instead, you have to first jump to HPC1 and then jump to HPC2 from HPC1. Easy peasy:
 <pre>
 Host HPC2
 	HostName HPC2.example.com
-    User HPC2_user_ID
-    ProxyJump HPC1
+	User HPC2_user_ID
+	ProxyJump HPC1
 </pre>
 After this, you can connect to HPC2 by `$ ssh HPC2` from your local computer. Great right. 
 
@@ -65,8 +65,8 @@ Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as
 	<pre>
 	Host HPC2
 		HostName HPC2.example.com
-	    User HPC2_user_ID
-	    ProxyJump HPC1
+		User HPC2_user_ID
+		ProxyJump HPC1
 	</pre>
 - Step 4: 
 	On your local computer, load the copied private key to ssh-agent:
