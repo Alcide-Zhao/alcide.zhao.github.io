@@ -9,11 +9,11 @@ tags:
   - jump client
 ---
 
-Often, you aneed to connect to a number of different HPCs remotely fron a local UNIX environment or your laptop on a daily basis. For this purpose, you struggle to remember all of the various usernames, remote addresses and command line options. You can of course create alias in your .bashrc or .zshrc(on macOS) files to make it easier. However, the ssh config file provides a more flexible and elegent way to do this. 
+Often, you aneed to connect to a dozen of HPCs remotely fron a local UNIX environment (your laptop or woekstation) on a daily basis. For this purpose, you struggle to remember all these various usernames, remote addresses and command line options. You can of course create alias in your .bashrc (or .zshrc for macOS) file to make it easier. However, the `~/.ssh/config` file provides a more flexible and elegent way to make your life much easier. 
 
-This file is normally here: `~/.ssh/config`, and you can edit this file following my examples below
+This file is usually here: `~/.ssh/config`, and you can edit this file following my examples below
 
-### A simple example to start with:
+### A simple example to start with
 ```
 Host HPC1
 	HostName HPC1.exaple.net
@@ -22,7 +22,7 @@ Host HPC1
 ```
 if you put this ito your `~/.ssh/config`, you can simply connect to HPC1 by `$ ssh HPC1`.
 
-### To make global set ups. 
+### To make global configurations
 ```
 Host *
     ServerAliveInterval 30
@@ -38,11 +38,11 @@ Host *
     #AllowTcpForwarding yes
     #GatewayPorts yes
 ```
-The above configurations will apply to all of your remote HPCs.
+The above will apply to all of your hosts in your `~/.ssh/config` file.
 
-Now, suppose you need to conenct to HPC2. However, you are not allowed to do that from your local computer directly. Instead, you have to first jump to HPC1 and then jump to HPC2 from HPC1. Easy peasy. 
 
 ### Jump using Proxy Jump
+Now, suppose you need to conenct to HPC2. However, you are not allowed to do that from your local computer directly. Instead, you have to first jump to HPC1 and then jump to HPC2 from HPC1. Easy peasy:
 ```
 Host HPC2
 	HostName HPC2.example.com
@@ -51,10 +51,9 @@ Host HPC2
 ```
 After this, you can connect to HPC2 by '$ ssh HPC2' from your local computer. Great right. 
 
+### Jump to remote HPCs that require loading private key to ssh-agent
 Let's lok at a more complicated scenario. Let's suppose you that you cannot jump to HPC2 via HPC1 strightforwardly. Instead, you need to run a command before doing so. Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as an example. 
 To log into JASMIN, you first need to be on an academic institutional UNIX environment (HPC1) and then you need to load your private key into ssh-agent on HPC1 each time before ssh to JASMIN. Complicated? well, the following solve this issue. 
-
-### Jump to remote HPCs that require loading private key to ssh-agent
 
 - Step 1:
 	Generate your SSH key pair as usual on HPC1 where you need to load your private key itno ssh-agent in order to ssh to HPC2. Note different HPCs may have different routines though. 
