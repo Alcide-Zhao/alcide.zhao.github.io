@@ -49,33 +49,36 @@ Host HPC2
     User HPC2_user_ID
     ProxyJump HPC1
 ```
-After this, you can connect to HPC2 by '$ ssh HPC2' from your local computer. Great right. 
+After this, you can connect to HPC2 by `$ ssh HPC2` from your local computer. Great right. 
 
 ### Jump to remote HPCs that require loading private key to ssh-agent
-Let's lok at a more complicated scenario. Let's suppose you that you cannot jump to HPC2 via HPC1 strightforwardly. Instead, you need to run a command before doing so. Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as an example. 
-To log into JASMIN, you first need to be on an academic institutional UNIX environment (HPC1) and then you need to load your private key into ssh-agent on HPC1 each time before ssh to JASMIN. Complicated? well, the following solve this issue. 
+Let's look at a more complicated scenario. There are cases when you cannot jump to HPC2 via HPC1 strightforwardly. Instead, you need to run a command before after conencted to HPC1 and before connecting to HPC2. 
+Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as an example. To log into JASMIN, you first need to be on an academic institutional UNIX environment (let's call it HPC1), from there you need to load the private key into ssh-agent on HPC1 each time before ssh to JASMIN. Hassle? In fact, you can connect to JASMIN from you local computer in just one step: 
 
-- Step 1:
-	Generate your SSH key pair as usual on HPC1 where you need to load your private key itno ssh-agent in order to ssh to HPC2. Note different HPCs may have different routines though. 
-- Step 2:
-	Copy the generated **private key** (normally named 'id_rsa*', NB not your public key which has a nema like 'id_rsa*.pub') to your lcoal compute under the '~/.ssh' folder using either scp or rsync. Then change the permission of the copied private key as 400: `$ chmod 400 id_rsa*`
+- Step 1: 
+	Generate your SSH key pair as usual on HPC1 where you need to load your private key itno ssh-agent in order to ssh to HPC2. Note you may need to refer to your remote host instrucitons in terms of how to generate SSH key pair. 
+- Step 2: 
+	Copy the generated **private key** (normally named `id_rsa*`, NB not your public key which has a name like `id_rsa*.pub`) to your lcoal compute under the `~/.ssh` folder using either scp or rsync. Then change the permission of the copied private key as 400: `$ chmod 400 id_rsa*`
 - Step 3: 
-	Edit your .ssh/config file such that you can jump to HPC2
+	Edit your `~/.ssh/config` file such that you can jump to HPC2 from HPC1
 	```
 	Host HPC2
 		HostName HPC2.example.com
 	    User HPC2_user_ID
 	    ProxyJump HPC1
 	```
-- Step 4
-	On your local computer, now load the copied private key to ssh-agent
+- Step 4: 
+	On your local computer, load the copied private key to ssh-agent:
 	```
 	$ eval $(ssh-agent -s)
 	$ ssh-add ~/.ssh/id_rsa_jasmin
 	```
-	Then, on your local computer, ssh to HPC2 by executing `ssh HPC2`
+	And then, on your local computer, ssh to HPC2 by executing `ssh HPC2`
 
-	You can make this even simpler by creating a tubed alias in .bashrc (or .zshrc for MAC): `alias Jump2HPC2='eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2'. Then, when you do `$ Jump2HPC2`, you are connected to HP2.`
+	You can make this even simpler by creating a tubed alias in `.bashrc` (or `.zshrc` for MAC): 
+	`alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"`. 
+	
+	Therefore, each time when you do `$ Jump2HPC2`, you are connected to HP2.
 
 
 
