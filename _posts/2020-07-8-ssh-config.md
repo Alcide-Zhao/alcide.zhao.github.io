@@ -119,6 +119,6 @@ alias C2HPC1='ssh -X HPC1
 alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"
 </pre>
 
-Now, you can connect to both HPC1 and HPC2 locally by typing, respectively, C2HPC1 and Jump2HPC2 on your local computer terminal.
+Now, you can connect to both HPC1 and HPC2 from your local computer by typing, respectively, C2HPC1 and Jump2HPC2 on your local computer terminal.
 
 
