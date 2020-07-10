@@ -20,7 +20,7 @@ Host HPC1
 	HostName HPC1.exaple.net
 	Port 2222   # NB: Change the port number according to your remote host, or just delete this line.
 	User HPC1_user_ID
-</pre>>
+</pre>
 You can also do `ssh -X HPC1` to have X forwarding on. 
 Thereafter, if you put an alias in your .bashrc such as `alias C2HPC1="ssh -X HPC1"`, you can connect to HPC1 simply by '$ C2HPC1'. 
 
