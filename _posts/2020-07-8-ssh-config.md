@@ -79,7 +79,7 @@ Here we take the UK HPC [JASMIN](https://help.jasmin.ac.uk/article/187-login) as
 	You can make this even simpler by creating a tubed alias in `.bashrc` (or `.zshrc` for MAC): 
 	`alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"`. 
 	
-	Therefore, each time when you do `$ Jump2HPC2`, you are connected to HP2.
+Therefore, each time when you do `$ Jump2HPC2`, you are connected to HP2.
 
 
 ## Put things together
@@ -113,7 +113,7 @@ Host HPC2
 	ProxyJump HPC1
 </pre>
 
-To make it easier, put the ollowing into your .bashrc file
+To make it even better, put the ollowing into your .bashrc file
 <pre>
 alias C2HPC1="ssh -X HPC1"
 alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"
