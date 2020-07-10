@@ -21,7 +21,7 @@ Host HPC1
 	Port 2222
 	User HPC1_user_ID
 </pre>>
-You can also do `ssh -X HPC1` to have X forwarding on. Thereafter, if you put an alias in your .bashrc such as `alias C2HPC1='ssh -X HPC1'`, you can connect to HPC1 simply by '$ C2HPC1'. 
+You can also do `ssh -X HPC1` to have X forwarding on. Thereafter, if you put an alias in your .bashrc such as `alias C2HPC1="ssh -X HPC1"`, you can connect to HPC1 simply by '$ C2HPC1'. 
 
 You may wonder why this is better than a sinple alias in .bashrc such as `C2HPC1='ssh -X HPC1_user_ID@HPC1.exaple.net'`. Well, continue with this article, and you will be amased by the answer. 
 
@@ -115,7 +115,7 @@ Host HPC2
 
 To make it easier, put the ollowing into your .bashrc file
 <pre>
-alias C2HPC1='ssh -X HPC1
+alias C2HPC1="ssh -X HPC1"
 alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"
 </pre>
 
