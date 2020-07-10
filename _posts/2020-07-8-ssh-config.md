@@ -11,17 +11,18 @@ tags:
 
 Often, you aneed to connect to a dozen of HPCs remotely fron a local UNIX environment (your laptop or woekstation) on a daily basis. For this purpose, you struggle to remember all these various usernames, remote addresses and command line options. You can of course create alias in your .bashrc (or .zshrc for macOS) file to make it easier. However, the `~/.ssh/config` file provides a more flexible and elegent way to make your life much easier. 
 
-This file is usually here: `~/.ssh/config`, and you can edit this file following my examples below
+This file is usually here: `~/.ssh/config`. Create it if does not exist, and you can edit this file following my examples below
 
 ## A simple example to start with
-let's supposed you would like to connect to a remote cluster (HPC1.exaple.net), and your used ID to HPC1 is HPC1_user_ID. By putting the following into your `~/.ssh/config`, you can simply connect to HPC1 by `$ ssh HPC1`.
+Let's say you would like to connect to a remote cluster (HPC1.exaple.net), and your used ID to HPC1 is HPC1_user_ID. By putting the following into your `~/.ssh/config`, you can simply connect to HPC1 by `$ ssh HPC1`.
 <pre>
 Host HPC1
 	HostName HPC1.exaple.net
 	Port 2222
 	User HPC1_user_ID
 </pre>>
-You can also do `ssh -X HPC1` to have X forwarding on. Thereafter, if you put an alias in your .bashrc such as `alias C2HPC1="ssh -X HPC1"`, you can connect to HPC1 simply by '$ C2HPC1'. 
+You can also do `ssh -X HPC1` to have X forwarding on. 
+Thereafter, if you put an alias in your .bashrc such as `alias C2HPC1="ssh -X HPC1"`, you can connect to HPC1 simply by '$ C2HPC1'. 
 
 You may wonder why this is better than a sinple alias in .bashrc such as `C2HPC1='ssh -X HPC1_user_ID@HPC1.exaple.net'`. Well, continue with this article, and you will be amased by the answer. 
 
@@ -42,8 +43,7 @@ Host *
 	#AllowTcpForwarding yes
 	#GatewayPorts yes
 </pre>
-The above will apply to all of remote your hosts managed by your `~/.ssh/config` file.
-
+The above will apply to all of remote your hosts managed by `~/.ssh/config`.
 
 ## Jump using ProxyJump
 Now, suppose you need to conenct to HPC2. However, you are not allowed to do that from your local computer directly. Instead, you have to first jump to HPC1 and then connect to HPC2 from HPC1. Easy peasy:
