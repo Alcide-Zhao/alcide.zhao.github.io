@@ -117,7 +117,7 @@ To make it easier, put the ollowing into your .bashrc file
 <pre>
 alias C2HPC1='ssh -X HPC1
 alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"
-</pre>pre>
+</pre>
 
 Now, you can connect to both HPC1 and HPC2 locally by typing, respectively, C2HPC1 and Jump2HPC2 on your local computer terminal.
 
