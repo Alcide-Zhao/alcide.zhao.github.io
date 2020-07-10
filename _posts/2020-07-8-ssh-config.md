@@ -18,7 +18,7 @@ Let's say you would like to connect to a remote cluster (HPC1.exaple.net), and y
 <pre>
 Host HPC1
 	HostName HPC1.exaple.net
-	Port 2222
+	Port 2222   # NB: Change the port number according to your remote host, or just delete this line.
 	User HPC1_user_ID
 </pre>>
 You can also do `ssh -X HPC1` to have X forwarding on. 
