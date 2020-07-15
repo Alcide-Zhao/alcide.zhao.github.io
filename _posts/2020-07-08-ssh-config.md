@@ -119,7 +119,7 @@ Host HPC2
 	ProxyJump HPC1
 </pre>
 
-To make it even better, put the ollowing into your .bashrc file
+To make it even better, put the following into your .bashrc file
 <pre>
 alias C2HPC1="ssh -X HPC1"
 alias Jump2HPC2="eval $(ssh-agent -s) &&  ssh-add ~/.ssh/id_rsa_jasmin && ssh -A HPC2"
