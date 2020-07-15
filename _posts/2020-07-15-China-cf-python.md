@@ -51,14 +51,14 @@ The following is a summary of their functions and features for quick reference
 
 # Cf-python<a class="anchor" id="block1"></a>
 ## 1. Displaying contents<a class="anchor" id="chapter1"></a>
-1. Dump metadata and field attributes
+- Dump metadata and field attributes
 >f.dump()
-2. Display field's data (including units and data array)
+- Display field's data (including units and data array)
 >f.data
-3. Data attributes
-> f.shape
-> f.array
-4. CF properties
+- Data attributes
+> f.shape<br/>
+f.array
+- CF properties
 >f.standar_name'air_temperature'<br/>
 f.setprop('standard_name', 'air_temperature')<br/>
 f.getprop('standard_name')<br/>
@@ -141,9 +141,9 @@ f.insert_data(data, axes=['Y', 'X'])
 
 ### 3.1 Subspacing by axis indices<a class="anchor" id="chapter3.1"></a>
 
-> f[slice(0, 12), :, 10:0:-2]
-> f[..., f.coord('longitude')<180]
-> f[:, [0, 72], [5, 4, 3]]
+> f[slice(0, 12), :, 10:0:-2] <br/>
+f[..., f.coord('longitude')<180] <br/>
+f[:, [0, 72], [5, 4, 3]]
     
 ### 3.2 Subspacing by values of domain items (coordinates or cell measures) <a class="anchor" id="chapter3.2"></a>
  - The axes to be subspaced may identified by name.<br/>
@@ -211,22 +211,23 @@ f = cf.read('file*.nc', select='air_temperature', select_options={'rank': cf.gt(
 ## 7. Read and Write<a class="anchor" id="chapter7"></a>
 
 ### 7.1 `cf.read` : Read fields from netCDF, PP or UM fields files.<a class="anchor" id="chapter7.1"></a>
- f = cf.read('file.nc')
- a. f field can be indexed
+> f = cf.read('file.nc')
+
+- f field can be indexed
 > cf.read('file*.nc')[0:2]  output the first two f fields
-b. Use select to constrain utput. E.g, otputs where standard_name contains pmsl and then that units is either K or Pa
- > cf.read('file*.nc', select={'standard_name': '.*pmsl*', 'units':['K', 'Pa']})
+-  Use select to constrain utput. E.g, otputs where standard_name contains pmsl and then that units is either K or Pa
+> cf.read('file*.nc', select={'standard_name': '.*pmsl*', 'units':['K', 'Pa']}) <br/>
 
 ### 7.2 `cf.write`: Write fields to a netCDF file.<a class="anchor" id="chapter7.1"></a>
 > cf.write(fields=[f,g], file_name='new_file.nc',verwrite=False,compress=5)
 
-    a. compress  0-9 balance between speed and size 1 is the fastest, but has the lowest compression ratio; 9 is the slowest but best compression ratio. <br/>
-    b. datatype: By default, input data types are preserve (numpy.dtype('float64'),numpy.dtype('float32'))
+- compress  0-9 balance between speed and size 1 is the fastest, but has the lowest compression ratio; 9 is the slowest but best compression ratio. <br/>
+- datatype: By default, input data types are preserve (numpy.dtype('float64'),numpy.dtype('float32'))
 
 ## 8. Aggregate<a class="anchor" id="chapter8"></a>
 - `cf.aggregate`: Aggregate fields into as few fields as possible.
 - The aggregation of fields may be thought of as the combination fields into each other to create a new field that occupies a larger domain.
-- [See here](https://cfpython.bitbucket.io/docs/latest/generated/cf.aggregate.html#cf.aggregate)
+- [Reference](https://cfpython.bitbucket.io/docs/latest/generated/cf.aggregate.html#cf.aggregate)
 
 
 ## 9. logical operations<a class="anchor" id="chapter9"></a>
@@ -307,12 +308,9 @@ True
 > h = f.regrids(g, 'nearest_dtos', axis_order='ZT')
 
 
-
-
-
 # Cf-plot<a class="anchor" id="block2"></a>
 ## 12. Opening graph, subplots and positioning<a class="anchor" id="chapter12"></a>
-### cfp.gopen(rows=1, columns=1, user_plot=1, file='cfplot.png', orientation='landscape', figsize=[11.7, 8.3], left=None, right=None, top=None, bottom=None, wspace=None, hspace=None, dpi=None, user_position=False):<a class="anchor" id="chapter12.1"></a>
+cfp.gopen(rows=1, columns=1, user_plot=1, file='cfplot.png', orientation='landscape', figsize=[11.7, 8.3], left=None, right=None, top=None, bottom=None, wspace=None, hspace=None, dpi=None, user_position=False):<a class="anchor" id="chapter12.1"></a>
 >file='cfplot.png',<br/>
 orientation - landscape or portrait<br/>
 figsize=[11.7, 8.3] - figure size in inches<br/>
@@ -324,15 +322,15 @@ wspace=None - width reserved for blank space between subplots - default=0.2<br/>
 hspace=None - height reserved for white space between subplots - default=0.2<br/>
 user_position=False - set to True to supply plot position via gpos xmin, xmax, ymin, ymax values
 
-### cfp.gpos(pos=1, xmin=None, xmax=None, ymin=None, ymax=None): <a class="anchor" id="chapter12.2"></a>
+cfp.gpos(pos=1, xmin=None, xmax=None, ymin=None, ymax=None): <a class="anchor" id="chapter12.2"></a>
 >pos=pos - plot position<br/>
 when user_position=True in cfp.gopen - set to True to supply plot position via gpos (xmin, xmax, ymin, ymax values)
 
-### cfp.gclose(view=True): <a class="anchor" id="chapter12.3"></a>
+cfp.gclose(view=True): <a class="anchor" id="chapter12.3"></a>
 > saves a graphics file. The default is to view the file as well
 
 ## 13.Set plotting variables and their defaults: Use setvars() to reset to the defaults<a class="anchor" id="chapter12"></a>
-### cfp.setvars(file=None, title_fontsize=None, text_fontsize=None, colorbar_fontsize=None, colorbar_fontweight=None, axis_label_fontsize=None, title_fontweight=None, text_fontweight=None, axis_label_fontweight=None, fontweight=None, continent_thickness=None, continent_color=None, continent_linestyle=None, viewer=None, tspace_year=None, tspace_month=None, tspace_day=None, tspace_hour=None, xtick_label_rotation=None, xtick_label_align=None, ytick_label_rotation=None, ytick_label_align=None, legend_text_weight=None, legend_text_size=None, cs_uniform=None, master_title=None, master_title_location=None, master_title_fontsize=None, master_title_fontweight=None, dpi=None, land_color=None, ocean_color=None, lake_color=None, rotated_grid_spacing=None, rotated_deg_spacing=None, rotated_continents=None, rotated_grid=None, rotated_labels=None, rotated_grid_thickness=None, legend_frame=None, legend_frame_edge_color=None, legend_frame_face_color=None, degsym=None, axis_width=None, grid=None, grid_spacing=None, grid_colour=None, grid_linestyle=None, grid_thickness=None):
+cfp.setvars(file=None, title_fontsize=None, text_fontsize=None, colorbar_fontsize=None, colorbar_fontweight=None, axis_label_fontsize=None, title_fontweight=None, text_fontweight=None, axis_label_fontweight=None, fontweight=None, continent_thickness=None, continent_color=None, continent_linestyle=None, viewer=None, tspace_year=None, tspace_month=None, tspace_day=None, tspace_hour=None, xtick_label_rotation=None, xtick_label_align=None, ytick_label_rotation=None, ytick_label_align=None, legend_text_weight=None, legend_text_size=None, cs_uniform=None, master_title=None, master_title_location=None, master_title_fontsize=None, master_title_fontweight=None, dpi=None, land_color=None, ocean_color=None, lake_color=None, rotated_grid_spacing=None, rotated_deg_spacing=None, rotated_continents=None, rotated_grid=None, rotated_labels=None, rotated_grid_thickness=None, legend_frame=None, legend_frame_edge_color=None, legend_frame_face_color=None, degsym=None, axis_width=None, grid=None, grid_spacing=None, grid_colour=None, grid_linestyle=None, grid_thickness=None):
 #### Axes <a class="anchor" id="chapter13.1"></a>
 >axis_width=None - width of line for the axes<br/>
 axis_label_fontsize=None - axis label fontsize, default=11<br/>
@@ -404,7 +402,7 @@ grid_thickness=1.0 - grid thickness
 
 ## 14. Colormap and colorbar<a class="anchor" id="chapter14"></a>
 ### customise colormap: a list of cf-plot [colormaps](http://ajheaps.github.io/cf-plot/colour_scales.html) <a class="anchor" id="chapter14.1"></a>
-### cfp.cscale(cmap=None, ncols=None, white=None, below=None, above=None, reverse=False, uniform=False):
+cfp.cscale(cmap=None, ncols=None, white=None, below=None, above=None, reverse=False, uniform=False):
 >cmap=None - name of colour map<br/>
 ncols=None - number of colours for colour map<br/>
 white=None - change these colours to be white: white=6<br/>
@@ -414,7 +412,7 @@ reverse=False - reverse the colour scale<br/>
 uniform=False - produce a uniform colour scale.<br/>
 
 ###  Control # color levels: <a class="anchor" id="chapter14.2"></a>
-### cfp.levs(min=None, max=None, step=None, manual=None, extend='both')
+cfp.levs(min=None, max=None, step=None, manual=None, extend='both')
 > min=min - minimum level<br/>
 max=max - maximum level<br/>
 step=step - step between levels<br/>
@@ -424,7 +422,7 @@ extend='neither', 'both', 'min', or 'max'
 - Once a user call is made to levs the levels are persistent.i.e. the next plot will use the same set of levels. Use levs() to reset to undefined levels.
 
 ### Customise colorbar <a class="anchor" id="chapter14.3"></a>
-### cfp.cbar(labels=None, orientation=None, position=None, shrink=None, fraction=None, title=None, text_fontsize=None, text_fontweight=None, text_up_down=None, text_down_up=None, drawedges=None, levs=None, thick=None, anchor=None, extend=None, mid=None, verbose=None)
+cfp.cbar(labels=None, orientation=None, position=None, shrink=None, fraction=None, title=None, text_fontsize=None, text_fontweight=None, text_up_down=None, text_down_up=None, drawedges=None, levs=None, thick=None, anchor=None, extend=None, mid=None, verbose=None)
 >labels - colorbar labels<br/>
 orientation - orientation 'horizontal' or 'vertical'<br/>
 position - colorbar position in normalised plot coordinates [left, bottom, width, height]<br/>
@@ -445,7 +443,7 @@ verbose = None
 
 ## 15. Axes: Controlling axes limit and labels<a class="anchor" id="chapter15"></a>
 ### Set plot limits for all non longitude-latitide plots:<a class="anchor" id="chapter15.1"></a>
-### cfp.gset(xmin=None, xmax=None, ymin=None, ymax=None, xlog=False, ylog=False, user_gset=1, twinx=None, twiny=None):
+cfp.gset(xmin=None, xmax=None, ymin=None, ymax=None, xlog=False, ylog=False, user_gset=1, twinx=None, twiny=None):
 
 >xmin=None - x minimum<br/>
 xmax=None - x maximum<br/>
@@ -458,16 +456,16 @@ twiny=None - set to True to make a twin x axis plot<br/>
 To set date axes use date strings i.e. cfp.gset(xmin = '1970-1-1', xmax = '1999-12-31', ymin = 285, ymax = 295);correct date format is 'YYYY-MM-DD' or 'YYYY-MM-DD HH:MM:SS'
 
 ### Customise axes labelling: <a class="anchor" id="chapter15.2"></a>
-### cfp.axes(xticks=None, xticklabels=None, yticks=None, yticklabels=None, xstep=None, ystep=None, xlabel=None, ylabel=None, title=None)
+cfp.axes(xticks=None, xticklabels=None, yticks=None, yticklabels=None, xstep=None, ystep=None, xlabel=None, ylabel=None, title=None)
 > xstep=xstep - x axis step<br/>
-    ystep=ystep - y axis step<br/>
-    xlabel=xlabel - label for the x-axis<br/>
-    ylabel=ylabel - label for the y-axis<br/>
-    xticks=xticks - values for x ticks<br/>
-    xticklabels=xticklabels - labels for x tick marks<br/>
-    yticks=yticks - values for y ticks<br/>
-    yticklabels=yticklabels - labels for y tick marks<br/>
-    title=None - set title
+ystep=ystep - y axis step<br/>
+xlabel=xlabel - label for the x-axis<br/>
+ylabel=ylabel - label for the y-axis<br/>
+xticks=xticks - values for x ticks<br/>
+xticklabels=xticklabels - labels for x tick marks<br/>
+yticks=yticks - values for y ticks<br/>
+yticklabels=yticklabels - labels for y tick marks<br/>
+title=None - set title
 
 ## 16. Plot typew with cf-lpot<a class="anchor" id="chapter16"></a>
 >#### [Contours](http://ajheaps.github.io/cf-plot/con.html): [demo](http://ajheaps.github.io/cf-plot/cylindrical.html), [latitude - pressure croess](http://ajheaps.github.io/cf-plot/pressure.html), [latitude-time](http://ajheaps.github.io/cf-plot/hovmuller.html)
