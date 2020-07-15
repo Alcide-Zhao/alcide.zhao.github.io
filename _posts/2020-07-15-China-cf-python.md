@@ -54,10 +54,12 @@ The following is a summary of their functions and features for quick reference
 - Dump metadata and field attributes
 >f.dump()
 - Display field's data (including units and data array)
->f.data
-- Data attributes
-> f.shape<br/>
-f.array
+>print(f.data)
+- Display field's data (only data array)
+>print(f.array)
+- Array shape
+> print(f.shape)<br/>
+print(f.array
 - CF properties
 >f.standar_name'air_temperature'<br/>
 f.setprop('standard_name', 'air_temperature')<br/>
@@ -479,13 +481,15 @@ title=None - set title
 ## 17. How to ? <a class="anchor" id="chapter17"></a>
 ### Have a common time units <a class="anchor" id="chapter17.1"></a>
 When plotting data with different time units users need to move their data to using a common set of units as below.this is because when making a contour or line plot the axes are defined in terms of a linear scale of numbers. Having two different linear scales breaks the connection between the data.
->data1.construct('T').Units<br/>
-<CF Units: hours since 1900-01-01 00:00:00 standard><br/>
+<pre>
+data1.construct('T').Units<br/>
+< Units: hours since 1900-01-01 00:00:00 standard><br/>
 data2.construct('T').Units<br/>
-<CF Units: days since 2008-09-01 00:00:00 standard><br/>
+< Units: days since 2008-09-01 00:00:00 standard><br/>
 `data1.construct('T').Units=data2.construct('T').Units` <br/>
 data1.construct('T').Units<br/>
-<CF Units: days since 2008-09-01 00:00:00 standard><br/>
+< Units: days since 2008-09-01 00:00:00 standard><br/>
+</pre>
 ### Reset time bounds <a class="anchor" id="chapter17.2"></a>
 >T=f.coord('T')<br/>
 T.del_bounds()<br/>
@@ -518,8 +522,6 @@ g.subspace(T=cf.wi(cf.dt('1860-1-16'), cf.dt('1960-1-16')))
 
 ### Area weighted mean <a class="anchor" id="chapter17.5"></a>
 > rea_mean = g.collapse('area: mean', weights='area')<br/>
-area_mean
-<CF Field: air_temperature(time(1680), latitude(1), longitude(1)) K>
 
 ### Passing data via arrays <a class="anchor" id="chapter17.6"></a>
 >import cfplot as cfp<br/>
