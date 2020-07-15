@@ -152,8 +152,8 @@ f[:, [0, 72], [5, 4, 3]]
  - The position in the data array of each axis need not be known and the axes to be subspaced may be given in any order.<br/>
  - Axes for which no subspacing is required need not be specified.<br/>
  - Size 1 axes of the domain which are not spanned by the data array may be specified.
-	 <pre>
-	 >>> f.subspace().shape
+	<pre>
+	>>> f.subspace().shape
 	(12, 73, 96)
 	>>> f.subspace(latitude=0).shape
 	(12, 1, 96)
@@ -214,11 +214,10 @@ f = cf.read('file*.nc', select='air_temperature', select_options={'rank': cf.gt(
 
 ### 7.1 `cf.read` : Read fields from netCDF, PP or UM fields files.<a class="anchor" id="chapter7.1"></a>
 > f = cf.read('file.nc')
-
-- f field can be indexed
-> cf.read('file*.nc')[0:2]  output the first two f fields
--  Use select to constrain utput. E.g, otputs where standard_name contains pmsl and then that units is either K or Pa
-> cf.read('file*.nc', select={'standard_name': '.*pmsl*', 'units':['K', 'Pa']}) <br/>
+- f field can be indexed<br/>
+cf.read('file*.nc')[0:2]  output the first two f fields<br/>
+-  Use select to constrain utput. E.g, otputs where standard_name contains pmsl and then that units is either K or Pa<br/>
+cf.read('file*.nc', select={'standard_name': '.*pmsl*', 'units':['K', 'Pa']}) <br/>
 
 
 ### 7.2 `cf.write`: Write fields to a netCDF file.<a class="anchor" id="chapter7.1"></a>
@@ -282,7 +281,7 @@ True
 > d == cf.dtge(1990, 1, 1)<br/>
 True
 
-- similarly for `cf.dtle, cf.dtlt, cf.dtne`
+- Similarly for `cf.dtle, cf.dtlt, cf.dtne`
 
 - `cf.year, cf.month, cf.day, cd.hour,cf,minute, cf.second` Return a cf.Query object for date-time years.
 > d == cf.year(cf.wi(2003, 2006))<br/>
@@ -328,8 +327,7 @@ cfp.gpos(pos=1, xmin=None, xmax=None, ymin=None, ymax=None): <a class="anchor" i
 >pos=pos - plot position<br/>
 when user_position=True in cfp.gopen - set to True to supply plot position via gpos (xmin, xmax, ymin, ymax values)
 
-cfp.gclose(view=True): <a class="anchor" id="chapter12.3"></a>
-> saves a graphics file. The default is to view the file as well
+cfp.gclose(view=True): <a class="anchor" id="chapter12.3"></a> saves a graphics file. The default is to view the file as well
 
 ## 13.Set plotting variables and their defaults: Use setvars() to reset to the defaults<a class="anchor" id="chapter12"></a>
 cfp.setvars(file=None, title_fontsize=None, text_fontsize=None, colorbar_fontsize=None, colorbar_fontweight=None, axis_label_fontsize=None, title_fontweight=None, text_fontweight=None, axis_label_fontweight=None, fontweight=None, continent_thickness=None, continent_color=None, continent_linestyle=None, viewer=None, tspace_year=None, tspace_month=None, tspace_day=None, tspace_hour=None, xtick_label_rotation=None, xtick_label_align=None, ytick_label_rotation=None, ytick_label_align=None, legend_text_weight=None, legend_text_size=None, cs_uniform=None, master_title=None, master_title_location=None, master_title_fontsize=None, master_title_fontweight=None, dpi=None, land_color=None, ocean_color=None, lake_color=None, rotated_grid_spacing=None, rotated_deg_spacing=None, rotated_continents=None, rotated_grid=None, rotated_labels=None, rotated_grid_thickness=None, legend_frame=None, legend_frame_edge_color=None, legend_frame_face_color=None, degsym=None, axis_width=None, grid=None, grid_spacing=None, grid_colour=None, grid_linestyle=None, grid_thickness=None):
@@ -413,7 +411,7 @@ above=None - change the number of colours above the mid point of the colour scal
 reverse=False - reverse the colour scale<br/>
 uniform=False - produce a uniform colour scale.<br/>
 
-###  Control # color levels: <a class="anchor" id="chapter14.2"></a>
+###14.1  Control # color levels: <a class="anchor" id="chapter14.2"></a>
 cfp.levs(min=None, max=None, step=None, manual=None, extend='both')
 > min=min - minimum level<br/>
 max=max - maximum level<br/>
@@ -423,7 +421,7 @@ extend='neither', 'both', 'min', or 'max'
 - The levs command manually sets the contour levels.
 - Once a user call is made to levs the levels are persistent.i.e. the next plot will use the same set of levels. Use levs() to reset to undefined levels.
 
-### Customise colorbar <a class="anchor" id="chapter14.3"></a>
+###14.2 Customise colorbar <a class="anchor" id="chapter14.3"></a>
 cfp.cbar(labels=None, orientation=None, position=None, shrink=None, fraction=None, title=None, text_fontsize=None, text_fontweight=None, text_up_down=None, text_down_up=None, drawedges=None, levs=None, thick=None, anchor=None, extend=None, mid=None, verbose=None)
 >labels - colorbar labels<br/>
 orientation - orientation 'horizontal' or 'vertical'<br/>
@@ -444,7 +442,7 @@ mid = False - label mid points of colours rather than the boundaries<br/>
 verbose = None   
 
 ## 15. Axes: Controlling axes limit and labels<a class="anchor" id="chapter15"></a>
-### Set plot limits for all non longitude-latitide plots:<a class="anchor" id="chapter15.1"></a>
+###15.1 Set plot limits for all non longitude-latitide plots:<a class="anchor" id="chapter15.1"></a>
 cfp.gset(xmin=None, xmax=None, ymin=None, ymax=None, xlog=False, ylog=False, user_gset=1, twinx=None, twiny=None):
 
 >xmin=None - x minimum<br/>
@@ -457,7 +455,7 @@ twinx=None - set to True to make a twin y axis plot<br/>
 twiny=None - set to True to make a twin x axis plot<br/>
 To set date axes use date strings i.e. cfp.gset(xmin = '1970-1-1', xmax = '1999-12-31', ymin = 285, ymax = 295);correct date format is 'YYYY-MM-DD' or 'YYYY-MM-DD HH:MM:SS'
 
-### Customise axes labelling: <a class="anchor" id="chapter15.2"></a>
+###15.2 Customise axes labelling: <a class="anchor" id="chapter15.2"></a>
 cfp.axes(xticks=None, xticklabels=None, yticks=None, yticklabels=None, xstep=None, ystep=None, xlabel=None, ylabel=None, title=None)
 > xstep=xstep - x axis step<br/>
 ystep=ystep - y axis step<br/>
@@ -478,8 +476,8 @@ title=None - set title
 >#### [colormap](http://ajheaps.github.io/cf-plot/colour_scales.html)
 
 
-## 17. How to ? <a class="anchor" id="chapter17"></a>
-### Have a common time units <a class="anchor" id="chapter17.1"></a>
+## 17 How to ? <a class="anchor" id="chapter17"></a>
+###17.1 Have a common time units <a class="anchor" id="chapter17.1"></a>
 When plotting data with different time units users need to move their data to using a common set of units as below.this is because when making a contour or line plot the axes are defined in terms of a linear scale of numbers. Having two different linear scales breaks the connection between the data.
 <pre>
 data1.construct('T').Units<br/>
@@ -490,19 +488,19 @@ data2.construct('T').Units<br/>
 data1.construct('T').Units<br/>
 < Units: days since 2008-09-01 00:00:00 standard><br/>
 </pre>
-### Reset time bounds <a class="anchor" id="chapter17.2"></a>
+###17.2 Reset time bounds <a class="anchor" id="chapter17.2"></a>
 >T=f.coord('T')<br/>
 T.del_bounds()<br/>
 new_bounds=T.create_bounds()<br/>
 T.set_bounds(new_bounds)
 
-### Check what the data is in a dimenssion <a class="anchor" id="chapter17"></a>
+###17.3 Check what the data is in a dimenssion <a class="anchor" id="chapter17"></a>
 >g = cf.read('cfplot_data/tas_A1.nc')[0]<br/>
 g.construct('longitude').array or<br/>
 g.construct('X').array or<br/>
 g.construct('long_name=longitude').array
 
-### Check time dimenssion <a class="anchor" id="chapter17.3"></a>
+###17.4 Check time dimenssion <a class="anchor" id="chapter17.3"></a>
 - All data
 > g.construct('T').dtarray<br/>
 g.item('T').dtarray
@@ -510,7 +508,7 @@ g.item('T').dtarray
 >g.item('T').bounds.dtarray<br/>
 
  
-### Select dimenssions <a class="anchor" id="chapter17.4"></a>
+###17.5 Select dimenssions <a class="anchor" id="chapter17.4"></a>
 - One dimenssion
 >g.subspace(longitude=0.0, latitude=0.0)<br/>
 g.subspace(time=cf.dt('1860-1-16'))
@@ -520,10 +518,10 @@ g.subspace(time=cf.dt('1860-1-16'))
 g.subspace(X=cf.wi(0, 60))<br/>
 g.subspace(T=cf.wi(cf.dt('1860-1-16'), cf.dt('1960-1-16')))
 
-### Area weighted mean <a class="anchor" id="chapter17.5"></a>
+###17.6 Area weighted mean <a class="anchor" id="chapter17.5"></a>
 > rea_mean = g.collapse('area: mean', weights='area')<br/>
 
-### Passing data via arrays <a class="anchor" id="chapter17.6"></a>
+###17.7 Passing data via arrays <a class="anchor" id="chapter17.6"></a>
 >import cfplot as cfp<br/>
 from netCDF4 import Dataset as ncfile<br/>
 nc = ncfile('cfplot_data/tas_A1.nc')<br/>
@@ -532,10 +530,10 @@ lats=nc.variables['lat'][:]<br/>
 temp=nc.variables['tas'][0,:,:]<br/>
 cfp.con(f=temp, x=lons, y=lats,ptype=1) ! ptype -> 1: lon-lat, 2:lat-height cross, 3:lon-height cross, 4:lon-time cross, 5:lon-time cross, 7:time-height cross
 
-### Change field metadata <a class="anchor" id="chapter17.7"></a>
+###17.8 Change field metadata <a class="anchor" id="chapter17.7"></a>
 > f.set_property('standard_name', 'new_name')
 
-### Convert pressure to height in kilometers and vice-versa using the equation P=P0exp(-z/H) <a class="anchor" id="chapter17.8"></a>
+###17.9 Convert pressure to height in kilometers and vice-versa using the equation P=P0exp(-z/H) <a class="anchor" id="chapter17.8"></a>
 >cfp.pcon(mb=None, km=None, h=7.0, p0=1000)<br/>
 mb=None - input pressure<br/>
 km=None - input height<br/>
