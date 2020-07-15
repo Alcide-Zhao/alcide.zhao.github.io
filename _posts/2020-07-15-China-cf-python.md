@@ -9,39 +9,37 @@ tags:
   - netcdf
 ---
 
-CF is a netCDF convention which is in wide and growing use for the storage of model-generated and observational data relating to the atmosphere, ocean and Earth system. it was developed by the UK NCAS.
-cf-plot is a set of Python routines for making the common contour, vector and line plots that climate researchers use. It is currently also avaliable for Python 3, although there are compitable isses. 
-[installation](https://cfpython.bitbucket.io/docs/latest/installation.html) [mannual](https://cfpython.bitbucket.io/docs/latest/index.html) [plotting](http://ajheaps.github.io/cf-plot/user_guide.html)
+CF is a netCDF convention which is in wide and growing use for the storage of model-generated and observational data relating to the atmosphere, ocean and Earth system. it was developed by the UK NCAS. Cf-plot is a set of Python routines for making the common contour, vector and line plots that climate researchers use. It is currently also avaliable for Python 3, although there are compitable isses. [installation](https://cfpython.bitbucket.io/docs/latest/installation.html) [mannual](https://cfpython.bitbucket.io/docs/latest/index.html) [plotting](http://ajheaps.github.io/cf-plot/user_guide.html)
 
 The following is a summary of their functions and features for quick reference
 
-* <span style="font-size:2em;">[Cf-python](#block1)</span>
-    * <span style="font-size:1.4em;">[Displaying contents](#chapter1)</span>
-    * <span style="font-size:1.4em;">[Creating cf fields](#chapter2)</span>
-    * <span style="font-size:1.4em;">[Subspacing](#chapter3)</span>
+* <span style="font-size:1.6em;">[Cf-python](#block1)</span>
+    * <span style="font-size:1.2em;">[Displaying contents](#chapter1)</span>
+    * <span style="font-size:1.2em;">[Creating cf fields](#chapter2)</span>
+    * <span style="font-size:1.2em;">[Subspacing](#chapter3)</span>
         * [Subspacing by axis indices](#chapter3.1)
         * [Subspacing by values of domain items (coordinates or cell measures)](#chapter3.2)
-    * <span style="font-size:1.4em;">[Assignment](#chapter4)</span>
-    * <span style="font-size:1.4em;">[Selection](#chapter5)</span>
-    * <span style="font-size:1.4em;">[Collapse](#chapter6)</span>
-    * <span style="font-size:1.4em;">[Read and Write](#chapter7) </span>
+    * <span style="font-size:1.2em;">[Assignment](#chapter4)</span>
+    * <span style="font-size:1.2em;">[Selection](#chapter5)</span>
+    * <span style="font-size:1.2em;">[Collapse](#chapter6)</span>
+    * <span style="font-size:1.2em;">[Read and Write](#chapter7) </span>
         * [Read](#chapter7.1) [write](#chapter7.2) 
-    * <span style="font-size:1.4em;">[Aggregate](#chapter8)</span>
-    * <span style="font-size:1.4em;">[logical operations](#chapter9)</span>
-    * <span style="font-size:1.4em;">[Time and calendar](#chapter10)</span>
-    * <span style="font-size:1.4em;">[Regrid](#chapter11)</span>
-* <span style="font-size:2em;">[Cf-plot](#block2)</span>
-    * <span style="font-size:1.4em;">[Opening graph, subplots and positioning](#chapter12)</span>
+    * <span style="font-size:1.2em;">[Aggregate](#chapter8)</span>
+    * <span style="font-size:1.2em;">[logical operations](#chapter9)</span>
+    * <span style="font-size:1.2em;">[Time and calendar](#chapter10)</span>
+    * <span style="font-size:1.2em;">[Regrid](#chapter11)</span>
+* <span style="font-size:1.6em;">[Cf-plot](#block2)</span>
+    * <span style="font-size:1.2em;">[Opening graph, subplots and positioning](#chapter12)</span>
         * [Opening graph](#chapter12.1) [Positioning](#chapter12.2) [Closeing](#chapter12.3) 
-    * <span style="font-size:1.4em;">[Set plotting variables and their defaults](#chapter13)</span>
+    * <span style="font-size:1.2em;">[Set plotting variables and their defaults](#chapter13)</span>
         * [Axes](#chapter13.1) [Colorbar](#chapter13.2) [Display](#chapter13.3) [Title](#chapter13.4) [Text](#chapter13.5) [Land-ocean-lake](#chapter13.6) [Rotation](#chapter13.7) [Legend](#chapter13.8) [Grid](#chapter13.9) 
-    * <span style="font-size:1.4em;">[Colormap and colorbar](#chapter14)</span>
+    * <span style="font-size:1.2em;">[Colormap and colorbar](#chapter14)</span>
         * [Colormap](#chapter14.1) [Color levels](#chapter14.2)     
-    * <span style="font-size:1.4em;">[Axes limits and labels](#chapter15)</span>
+    * <span style="font-size:1.2em;">[Axes limits and labels](#chapter15)</span>
         * [Set plot limits for all non longitude-latitide plots](#chapter15.1)
         * [Axes labelling](#chapter15.2)     
-    * <span style="font-size:1.4em;">[Plot typew with cf-lpot](#chapter16)</span>
-    * <span style="font-size:1.4em;">[How to ?](#chapter17) </span>  
+    * <span style="font-size:1.2em;">[Plot typew with cf-lpot](#chapter16)</span>
+    * <span style="font-size:1.2em;">[How to ?](#chapter17) </span>  
         * [Have the same time units](#chapter17.1)   
         * [Reset time bounds](#chapter17.2) 
         * [Check what the data is in a dimenssion](#chapter17.3)         
