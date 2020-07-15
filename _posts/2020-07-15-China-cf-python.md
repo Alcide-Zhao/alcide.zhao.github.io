@@ -56,8 +56,8 @@ The following is a summary of their functions and features for quick reference
 2. Display field's data (including units and data array)
 >f.data
 3. Data attributes
->f.shape\
-f.array
+> f.shape
+> f.array
 4. CF properties
 >f.standar_name'air_temperature'\
 f.setprop('standard_name', 'air_temperature')\
@@ -141,40 +141,40 @@ f.insert_data(data, axes=['Y', 'X'])
 
 ### 3.1 Subspacing by axis indices<a class="anchor" id="chapter3.1"></a>
 
-> f[slice(0, 12), :, 10:0:-2]\
-f[..., f.coord('longitude')<180]\
-f[:, [0, 72], [5, 4, 3]]
+> f[slice(0, 12), :, 10:0:-2]
+> f[..., f.coord('longitude')<180]
+> f[:, [0, 72], [5, 4, 3]]
     
 ### 3.2 Subspacing by values of domain items (coordinates or cell measures) <a class="anchor" id="chapter3.2"></a>
  - The axes to be subspaced may identified by name.\
  - The position in the data array of each axis need not be known and the axes to be subspaced may be given in any order.\
  - Axes for which no subspacing is required need not be specified.\
  - Size 1 axes of the domain which are not spanned by the data array may be specified.
- <pre>
- >>> f.subspace().shape
-(12, 73, 96)
->>> f.subspace(latitude=0).shape
-(12, 1, 96)
->>> f.subspace(latitude=cf.wi(-30, 30)).shape
-(12, 25, 96)
->>> f.subspace(long=cf.ge(270, 'degrees_east'), lat=cf.set([0, 2.5, 10])).shape
-(12, 3, 24)
->>> f.subspace(latitude=cf.lt(0, 'degrees_north'))
-(12, 36, 96)
->>> f.subspace(latitude=[cf.lt(0, 'degrees_north'), 90])
-(12, 37, 96)
->>> import math
->>> f.subspace('exact', longitude=cf.lt(math.pi, 'radian'), height=2)
-(12, 73, 48)
->>> f.subspace(height=cf.gt(3))
-IndexError: No indices found for 'height' values gt 3
->>> f.subspace(dim2=3.75).shape
-(12, 1, 96)
->>> f.subspace(time=cf.le(cf.dt('1860-06-16 12:00:00')).shape
-(6, 73, 96)
->>> f.subspace(time=cf.gt(cf.dt(1860, 7)),shape
-(5, 73, 96)
- </pre>
+	 <pre>
+	 >>> f.subspace().shape
+	(12, 73, 96)
+	>>> f.subspace(latitude=0).shape
+	(12, 1, 96)
+	>>> f.subspace(latitude=cf.wi(-30, 30)).shape
+	(12, 25, 96)
+	>>> f.subspace(long=cf.ge(270, 'degrees_east'), lat=cf.set([0, 2.5, 10])).shape
+	(12, 3, 24)
+	>>> f.subspace(latitude=cf.lt(0, 'degrees_north'))
+	(12, 36, 96)
+	>>> f.subspace(latitude=[cf.lt(0, 'degrees_north'), 90])
+	(12, 37, 96)
+	>>> import math
+	>>> f.subspace('exact', longitude=cf.lt(math.pi, 'radian'), height=2)
+	(12, 73, 48)
+	>>> f.subspace(height=cf.gt(3))
+	IndexError: No indices found for 'height' values gt 3
+	>>> f.subspace(dim2=3.75).shape
+	(12, 1, 96)
+	>>> f.subspace(time=cf.le(cf.dt('1860-06-16 12:00:00')).shape
+	(6, 73, 96)
+	>>> f.subspace(time=cf.gt(cf.dt(1860, 7)),shape
+	(5, 73, 96)
+	 </pre>
 
 ## 4. Assignment<a class="anchor" id="chapter4"></a>
 
