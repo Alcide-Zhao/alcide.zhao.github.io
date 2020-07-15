@@ -480,13 +480,13 @@ title=None - set title
 ###17.1 Have a common time units <a class="anchor" id="chapter17.1"></a>
 When plotting data with different time units users need to move their data to using a common set of units as below.this is because when making a contour or line plot the axes are defined in terms of a linear scale of numbers. Having two different linear scales breaks the connection between the data.
 <pre>
-data1.construct('T').Units<br/>
-< Units: hours since 1900-01-01 00:00:00 standard><br/>
-data2.construct('T').Units<br/>
-< Units: days since 2008-09-01 00:00:00 standard><br/>
-`data1.construct('T').Units=data2.construct('T').Units` <br/>
-data1.construct('T').Units<br/>
-< Units: days since 2008-09-01 00:00:00 standard><br/>
+>>> data1.construct('T').Units
+< Units: hours since 1900-01-01 00:00:00 standard>
+>>> data2.construct('T').Units
+< Units: days since 2008-09-01 00:00:00 standard>
+>>> `data1.construct('T').Units=data2.construct('T').Units`
+>>> data1.construct('T').Units
+< Units: days since 2008-09-01 00:00:00 standard>
 </pre>
 ###17.2 Reset time bounds <a class="anchor" id="chapter17.2"></a>
 >T=f.coord('T')<br/>
