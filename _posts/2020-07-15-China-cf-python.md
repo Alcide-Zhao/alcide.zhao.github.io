@@ -220,9 +220,9 @@ f = cf.read('file*.nc', select='air_temperature', select_options={'rank': cf.gt(
 -  Use select to constrain utput. E.g, otputs where standard_name contains pmsl and then that units is either K or Pa
 > cf.read('file*.nc', select={'standard_name': '.*pmsl*', 'units':['K', 'Pa']}) <br/>
 
+
 ### 7.2 `cf.write`: Write fields to a netCDF file.<a class="anchor" id="chapter7.1"></a>
 > cf.write(fields=[f,g], file_name='new_file.nc',verwrite=False,compress=5)
-
 - compress  0-9 balance between speed and size 1 is the fastest, but has the lowest compression ratio; 9 is the slowest but best compression ratio. <br/>
 - datatype: By default, input data types are preserve (numpy.dtype('float64'),numpy.dtype('float32'))
 
