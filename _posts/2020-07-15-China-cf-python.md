@@ -11,8 +11,11 @@ tags:
 
 CF is a netCDF convention which is in wide and growing use for the storage of model-generated and observational data relating to the atmosphere, ocean and Earth system. it was developed by the UK NCAS. Cf-plot is a set of Python routines for making the common contour, vector and line plots that climate researchers use. It is currently also avaliable for Python 3, although there are compitable isses. 
 
-The following is a summary of their functions and features for quick reference
-* [installation](https://cfpython.bitbucket.io/docs/latest/installation.html) [mannual](https://cfpython.bitbucket.io/docs/latest/index.html)   [plotting](http://ajheaps.github.io/cf-plot/user_guide.html)  [cf-plot source code](http://ajheaps.github.io/cf-plot/_modules/cfplot.html#con)
+The following is a summary of their functions and features for quick reference </br>
+[Installation](https://cfpython.bitbucket.io/docs/latest/installation.html) </br>
+[Mannual](https://cfpython.bitbucket.io/docs/latest/index.html)   </br></br>
+[Plotting](http://ajheaps.github.io/cf-plot/user_guide.html)  </br>
+[Cf-plot source code](http://ajheaps.github.io/cf-plot/_modules/cfplot.html#con)</br>
 NB: Becuase cfplot is a high-level plotting package, you may get issues using it along with matplotlib and/or other p;otting packages. However, in cf-plot  plot is stored as a plot object: `cfp.plotvars.plot`. </br>
 If you are making a map plot, the the map object is `cfp.plotvars.mymap` and this is the object (based on basemao) you should operate on. 
 To see all the methods for the plot object type:
