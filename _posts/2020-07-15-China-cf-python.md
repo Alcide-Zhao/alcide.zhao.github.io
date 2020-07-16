@@ -16,7 +16,7 @@ The following is a summary of their functions and features for quick reference <
 [Mannual](https://cfpython.bitbucket.io/docs/latest/index.html)   </br></br>
 [Plotting](http://ajheaps.github.io/cf-plot/user_guide.html)  </br>
 [Cf-plot source code](http://ajheaps.github.io/cf-plot/_modules/cfplot.html#con)</br>
-NB: Becuase cfplot is a high-level plotting package, you may get issues using it along with matplotlib and/or other p;otting packages. However, in cf-plot  plot is stored as a plot object: `cfp.plotvars.plot`. </br>
+NB: Becuase cfplot is a high-level plotting package, you may get issues using it along with matplotlib and/or other p;otting packages. However, in cf-plot  plot is stored as a plot object: `cfp.plotvars.plot`</br>
 If you are making a map plot, the the map object is `cfp.plotvars.mymap` and this is the object (based on basemao) you should operate on. 
 To see all the methods for the plot object type:
 >cfp.gopen()<br/>
