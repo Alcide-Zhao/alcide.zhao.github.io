@@ -12,10 +12,18 @@ tags:
 CF is a netCDF convention which is in wide and growing use for the storage of model-generated and observational data relating to the atmosphere, ocean and Earth system. it was developed by the UK NCAS. Cf-plot is a set of Python routines for making the common contour, vector and line plots that climate researchers use. It is currently also avaliable for Python 3, although there are compitable isses. 
 
 The following is a summary of their functions and features for quick reference</br>
-[Installation](https://cfpython.bitbucket.io/docs/latest/installation.html)</br>
-[Mannual](https://cfpython.bitbucket.io/docs/latest/index.html)</br>
-[Plotting](http://ajheaps.github.io/cf-plot/user_guide.html)</br>
-[Cf-plot source code](http://ajheaps.github.io/cf-plot/_modules/cfplot.html#con)</br>
+* [Installation](https://cfpython.bitbucket.io/docs/latest/installation.html)
+* [Mannual](https://cfpython.bitbucket.io/docs/latest/index.html)
+* [Cf-plot source code](http://ajheaps.github.io/cf-plot/_modules/cfplot.html#con)
+* [Plotting](http://ajheaps.github.io/cf-plot/user_guide.html)
+	* [Contours](http://ajheaps.github.io/cf-plot/con.html):[demo](http://ajheaps.github.io/cf-plot/cylindrical.html)
+	* latitude - pressure croess](http://ajheaps.github.io/cf-plot/pressure.html), [latitude-time](http://ajheaps.github.io/cf-plot/hovmuller.html)
+* [Lines](http://ajheaps.github.io/cf-plot/lineplot.html): [demo](http://ajheaps.github.io/cf-plot/graphs.html) 
+* [vectors](http://ajheaps.github.io/cf-plot/vect.html): [demo](http://ajheaps.github.io/cf-plot/vectors.html) 
+* [trajectory](http://ajheaps.github.io/cf-plot/traj.html): [demo](http://ajheaps.github.io/cf-plot/trajectories.html+) 
+* [Stipple](http://ajheaps.github.io/cf-plot/stipple.html): [demo](http://ajheaps.github.io/cf-plot//stipple_plots.html)
+* [colormap](http://ajheaps.github.io/cf-plot/colour_scales.html)
+
 NB: Becuase cfplot is a high-level plotting package, you may get issues using it along with matplotlib and/or other p;otting packages. However, in cf-plot  plot is stored as a plot object: `cfp.plotvars.plot`</br>
 If you are making a map plot, the the map object is `cfp.plotvars.mymap` and this is the object (basemao based) you should operate on. 
 To see all the methods for the plot object type:
@@ -48,16 +56,15 @@ dir(cfp.plotvars.mymap)
         * [Colormap](#chapter14.1) [Color levels](#chapter14.2)     
     * <span style="font-size:1.2em;">[Axes limits and labels](#chapter15)</span>
         * [Set plot limits for all non longitude-latitide plots](#chapter15.1)
-        * [Axes labelling](#chapter15.2)     
-    * <span style="font-size:1.2em;">[Plot typew with cf-lpot](#chapter16)</span>
-    * <span style="font-size:1.2em;">[How to ?](#chapter17) </span>  
-        * [Have the same time units](#chapter17.1)   
-        * [Reset time bounds](#chapter17.2) 
-        * [Check what the data is in a dimenssion](#chapter17.3)         
-        * [Check time dimenssion](#chapter17.4) 
-        * [Area weighted mean](#chapter17.5) 
-        * [Passing data via arrays](#chapter17.6) 
-        * [Convert pressure to height in kilometers and vice-vers](#chapter17.7)     
+        * [Axes labelling](#chapter15.2)
+    * <span style="font-size:1.2em;">[How to ?](#chapter16) </span>  
+        * [Have the same time units](#chapter16.1)   
+        * [Reset time bounds](#chapter16.2) 
+        * [Check what the data is in a dimenssion](#chapter16.3)         
+        * [Check time dimenssion](#chapter16.4) 
+        * [Area weighted mean](#chapter16.5) 
+        * [Passing data via arrays](#chapter16.6) 
+        * [Convert pressure to height in kilometers and vice-vers](#chapter16.7)     
 
 
 # Cf-python<a class="anchor" id="block1"></a>
@@ -478,17 +485,8 @@ yticks=yticks - values for y ticks<br/>
 yticklabels=yticklabels - labels for y tick marks<br/>
 title=None - set title
 
-## 16. Plot typew with cf-lpot<a class="anchor" id="chapter16"></a>
->#### [Contours](http://ajheaps.github.io/cf-plot/con.html): [demo](http://ajheaps.github.io/cf-plot/cylindrical.html), [latitude - pressure croess](http://ajheaps.github.io/cf-plot/pressure.html), [latitude-time](http://ajheaps.github.io/cf-plot/hovmuller.html)
->#### [Lines](http://ajheaps.github.io/cf-plot/lineplot.html): [demo](http://ajheaps.github.io/cf-plot/graphs.html) 
->#### [vectors](http://ajheaps.github.io/cf-plot/vect.html): [demo](http://ajheaps.github.io/cf-plot/vectors.html) 
->#### [trajectory](http://ajheaps.github.io/cf-plot/traj.html): [demo](http://ajheaps.github.io/cf-plot/trajectories.html+) 
->#### [Stipple](http://ajheaps.github.io/cf-plot/stipple.html): [demo](http://ajheaps.github.io/cf-plot//stipple_plots.html)
->#### [colormap](http://ajheaps.github.io/cf-plot/colour_scales.html)
-
-
-## 17 How to ? <a class="anchor" id="chapter17"></a>
-### 17.1 Have a common time units <a class="anchor" id="chapter17.1"></a>
+## 16 How to ? <a class="anchor" id="chapter16"></a>
+### 16.1 Have a common time units <a class="anchor" id="chapter16.1"></a>
 When plotting data with different time units users need to move their data to using a common set of units as below.this is because when making a contour or line plot the axes are defined in terms of a linear scale of numbers. Having two different linear scales breaks the connection between the data.
 <pre>
 >>> data1.construct('T').Units
@@ -499,19 +497,19 @@ When plotting data with different time units users need to move their data to us
 >>> data1.construct('T').Units
 < Units: days since 2008-09-01 00:00:00 standard>
 </pre>
-### 17.2 Reset time bounds <a class="anchor" id="chapter17.2"></a>
+### 16.2 Reset time bounds <a class="anchor" id="chapter16.2"></a>
 >T=f.coord('T')<br/>
 T.del_bounds()<br/>
 new_bounds=T.create_bounds()<br/>
 T.set_bounds(new_bounds)
 
-### 17.3 Check what the data is in a dimenssion <a class="anchor" id="chapter17"></a>
+### 16.3 Check what the data is in a dimenssion <a class="anchor" id="chapter17"></a>
 >g = cf.read('cfplot_data/tas_A1.nc')[0]<br/>
 g.construct('longitude').array or<br/>
 g.construct('X').array or<br/>
 g.construct('long_name=longitude').array
 
-### 17.4 Check time dimenssion <a class="anchor" id="chapter17.3"></a>
+### 16.4 Check time dimenssion <a class="anchor" id="chapter16.3"></a>
 - All data
 > g.construct('T').dtarray<br/>
 g.item('T').dtarray
@@ -519,7 +517,7 @@ g.item('T').dtarray
 >g.item('T').bounds.dtarray<br/>
 
  
-### 17.5 Select dimenssions <a class="anchor" id="chapter17.4"></a>
+### 16.5 Select dimenssions <a class="anchor" id="chapter16.4"></a>
 - One dimenssion
 >g.subspace(longitude=0.0, latitude=0.0)<br/>
 g.subspace(time=cf.dt('1860-1-16'))
@@ -529,10 +527,10 @@ g.subspace(time=cf.dt('1860-1-16'))
 g.subspace(X=cf.wi(0, 60))<br/>
 g.subspace(T=cf.wi(cf.dt('1860-1-16'), cf.dt('1960-1-16')))
 
-### 17.6 Area weighted mean <a class="anchor" id="chapter17.5"></a>
+### 16.6 Area weighted mean <a class="anchor" id="chapter16.5"></a>
 > rea_mean = g.collapse('area: mean', weights='area')<br/>
 
-### 17.7 Passing data via arrays <a class="anchor" id="chapter17.6"></a>
+### 16.7 Passing data via arrays <a class="anchor" id="chapter16.6"></a>
 >import cfplot as cfp<br/>
 from netCDF4 import Dataset as ncfile<br/>
 nc = ncfile('cfplot_data/tas_A1.nc')<br/>
@@ -541,10 +539,10 @@ lats=nc.variables['lat'][:]<br/>
 temp=nc.variables['tas'][0,:,:]<br/>
 cfp.con(f=temp, x=lons, y=lats,ptype=1) ! ptype -> 1: lon-lat, 2:lat-height cross, 3:lon-height cross, 4:lon-time cross, 5:lon-time cross, 7:time-height cross
 
-### 17.8 Change field metadata <a class="anchor" id="chapter17.7"></a>
+### 16.8 Change field metadata <a class="anchor" id="chapter16.7"></a>
 > f.set_property('standard_name', 'new_name')
 
-### 17.9 Convert pressure to height in kilometers and vice-versa using the equation P=P0exp(-z/H) <a class="anchor" id="chapter17.8"></a>
+### 16.9 Convert pressure to height in kilometers and vice-versa using the equation P=P0exp(-z/H) <a class="anchor" id="chapter16.8"></a>
 >cfp.pcon(mb=None, km=None, h=7.0, p0=1000)<br/>
 mb=None - input pressure<br/>
 km=None - input height<br/>
