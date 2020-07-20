@@ -9,8 +9,8 @@
 locale                   : "en-GB"
 title                    : "ALCIDE ZHAO"
 title_separator          : "-"
-name                     : &name "Alcide Zhao"
-description              : &description "Postdocotoral associate at University of Edinburgh"
+name                     : &name "Alcide Zhao, Dr."
+description              : &description "Research Scientist at NCAS"
 url                      : https://alcide-zhao.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "alcide-zhao/alcide-zhao.github.io/"
@@ -87,12 +87,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alcide Zhao"
+  name             : "Alcide Zhao, Dr."
   avatar           : "profile.jpg"
   bio              : "Data scientist and climate modeller.  BSs (2014), MSc (2016), PhD (2019)"
   location         : "Edinburgh, UK"
   employer         :
-  email            : "Alcide.Zhao@ed.ac.uk"
+  email            : "alcide.zhao@reading.ac.uk"
   googlescholar    : "https://scholar.google.co.uk/citations?user=-H85oHsAAAAJ&hl=en"
   researchgate     : "https://www.researchgate.net/profile/Alcide_Zhao"
   orcid            : "https://orcid.org/0000-0002-8300-5872"
