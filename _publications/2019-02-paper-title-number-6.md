@@ -1,5 +1,5 @@
 ---
-title: "006: Significant climate impacts of aerosol changes driven by growth in energy use and advances in emission control technology"
+title: "06: Significant climate impacts of aerosol changes driven by growth in energy use and advances in emission control technology"
 collection: publications
 excerpt: ''
 date: 2019-11-29

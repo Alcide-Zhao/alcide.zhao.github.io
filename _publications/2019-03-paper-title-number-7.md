@@ -1,5 +1,5 @@
 ---
-title: "007: Climate forcing and response to greenhouse gases, aerosols and ozone in CESM1"
+title: "07: Climate forcing and response to greenhouse gases, aerosols and ozone in CESM1"
 collection: publications
 excerpt: ''
 date: 2019-12-26

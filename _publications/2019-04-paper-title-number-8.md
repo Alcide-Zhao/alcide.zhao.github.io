@@ -1,5 +1,5 @@
 ---
-title: "008: Understanding aerosol-cloud interactions is key for reliable future heatwave projections"
+title: "08: Understanding aerosol-cloud interactions is key for reliable future heatwave projections"
 collection: publications
 excerpt: ''
 date: 2019-12-26

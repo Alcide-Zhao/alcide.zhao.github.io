@@ -1,5 +1,5 @@
 ---
-title: "009: Snow Moving to Higher Elevations: Analyzing Three Decades of Snowline Dynamics in the Alps"
+title: "09: Snow Moving to Higher Elevations: Analyzing Three Decades of Snowline Dynamics in the Alps"
 collection: publications
 excerpt: ''
 date: 2020-05-16
