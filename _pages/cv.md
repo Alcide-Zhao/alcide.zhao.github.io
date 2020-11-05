@@ -17,12 +17,12 @@ redirect_from:
 {: .notice--danger}
 
 
-ACADEMIC WORK EXPERIENCE
+PROFESSIONAL EXPERIENCE
 ======
 ------
-2020.07-present&emsp;Research Scientist at National Center for Atmospheric Research and University of Reading<br/>
+2020.07-present&emsp;Research Scientist at National Center for Atmospheric Research & University of Reading<br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;Project: DAHLIA: Dust-AtmospHere-Land Interactions in East Asia (Newton Fund)<br/>
-2019.09-2020.03&emsp;Postdoctoral researcher at The University of Edinburgh<br/>
+2019.09-2020.03&emsp;Postdoctoral Research Associate at The University of Edinburgh<br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;Project: ENSO and Asian monsoon and climate teleconnections<br/>
 2019.06-present&emsp;Lead analyst/author<br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;The AerChemMIP joint analysis on atmospheric oxidising capability for IPCC AR6<br/>
