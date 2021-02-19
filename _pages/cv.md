@@ -32,7 +32,7 @@ PROFESSIONAL EXPERIENCE
 &emsp;&emsp;&emsp;&emsp; &emsp;Marina Sanchez-Oro Ruiz (MSc thesis); Minjia Zhu (MSc thesis); Matthew Karmer (Honours degree);<br/> -->
 2017.01-2019.08&emsp;Tutor at The University of Edinburgh<br/>
 &emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
+&emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
 
 
 EDUCATION
