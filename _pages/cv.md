@@ -20,8 +20,10 @@ redirect_from:
 PROFESSIONAL EXPERIENCE
 ======
 ------
-2020.07-present&emsp;Research Scientist at National Center for Atmospheric Research & University of Reading<br/>
+2020.07-present&emsp;Research Scientist at National Centre for Atmospheric Research (NCAS) & University of Reading<br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;Project: DAHLIA: Dust-AtmospHere-Land Interactions in East Asia (Newton Fund)<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; WISHBONE:Wider impacts of Subpolar North Atlantic decadal variability on the ocean and atmosphere (NERC Fund)<br/>
+2020.03-2022.03&emsp;Official Visitor at The University of Edinburgh<br/>
 2019.09-2020.03&emsp;Postdoctoral Research Associate at The University of Edinburgh<br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;Project: ENSO and Asian monsoon and climate teleconnections<br/>
 2019.06-present&emsp;Lead analyst/author<br/>
@@ -58,7 +60,7 @@ CURRENT RESEARCH FOCUSES
 PEER-REVIEWER
 ======
 ------
-Atmosphere, Climatic Change, Climate Dynamics, Journal of Climate, Journal of Geophysical Research, Earth's Future 
+Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters, Journal of Climate, Journal of Geophysical Research, Earth's Future 
 
 INVITED-TALKS
 ======
