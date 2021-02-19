@@ -22,7 +22,7 @@ PROFESSIONAL EXPERIENCE
 ------
 2020.07-present&emsp;Research Scientist at National Centre for Atmospheric Research (NCAS) & University of Reading<br/>
 &emsp;&emsp;&emsp;Projects: DAHLIA: Dust-AtmospHere-Land Interactions in East Asia (Newton Fund)<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp; WISHBONE:Wider impacts of Subpolar North Atlantic decadal variability on the ocean and atmosphere (NERC)<br/>
+&emsp;&emsp;&emsp;WISHBONE: Wider impacts of Subpolar North Atlantic decadal variability on the ocean and atmosphere<br/>
 2020.03-2022.03&emsp;Official Visitor at The University of Edinburgh<br/>
 2019.09-2020.03&emsp;Postdoctoral Research Associate at The University of Edinburgh<br/>
 &emsp;&emsp;&emsp;Project: ENSO and Asian monsoon and climate teleconnections<br/>
@@ -31,7 +31,7 @@ PROFESSIONAL EXPERIENCE
 2018.04-present&emsp;Research projects co-mentor at school of GeoSciences, The University of Edinburgh<br/>
 &emsp;&emsp;&emsp;&emsp; &emsp;Marina Sanchez-Oro Ruiz (MSc thesis); Minjia Zhu (MSc thesis); Matthew Karmer (Honours degree);<br/> -->
 2017.01-2019.08&emsp;Tutor at The University of Edinburgh<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
+&emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
 &emsp;&emsp;&emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
 
 
