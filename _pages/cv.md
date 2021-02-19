@@ -39,13 +39,13 @@ EDUCATION
 ======
 ------
 2016.09–2019.08	&emsp;The University of Edinburgh <br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;PhD in Atmospheric and Environmental Sciences (fully funded)<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Thesis: [Impacts of anthropogenic aerosols on air quality, climate and extremes](https://era.ed.ac.uk/handle/1842/36679)<br/>
+&emsp;&emsp;&emsp;PhD in Atmospheric and Environmental Sciences (fully funded)<br/>
+&emsp;&emsp;&emsp;Thesis: [Impacts of anthropogenic aerosols on air quality, climate and extremes](https://era.ed.ac.uk/handle/1842/36679)<br/>
 2014.09–2016.06	&emsp;Ocean University of China <br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;MSc in Oceanography (Satellite Ocean Remote Sensing)<br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;Thesis: Application of multi-satellite data in studying tropical cyclones over Pacific Northwest<br/>
+&emsp;&emsp;&emsp;MSc in Oceanography (Satellite Ocean Remote Sensing)<br/>
+&emsp;&emsp;&emsp;Thesis: Application of multi-satellite data in studying tropical cyclones over Pacific Northwest<br/>
 2010.09–2014.06	&emsp;Ocean University of China <br/>
-&emsp;&emsp;&emsp;&emsp;&emsp;BSc in Oceanography (GPA: 89.6)<br/>
+&emsp;&emsp;&emsp;BSc in Oceanography (GPA: 89.6)<br/>
 
 
 CURRENT RESEARCH FOCUSES
