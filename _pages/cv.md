@@ -39,8 +39,7 @@ RESPONSIBILITIES
 ------
 - Administrator (Mr. Weathers) for [The Weather Games](https://weathergame.reading.ac.uk/) <br/>
 - Co-organiser for the SNAP international seminar series <br/>
-- Peer reviewer for Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters,
-&emsp;&emsp;&emsp; Journal of Climate, Journal of Geophysical Research, Earth's Future
+- Peer reviewer for Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters, Journal of Climate, Journal of Geophysical Research, Earth's Future
 
 
 EDUCATION
