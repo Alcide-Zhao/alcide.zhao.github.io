@@ -37,8 +37,8 @@ PROFESSIONAL EXPERIENCE
 RESPONSIBILITIES
 ======
 ------
-Administrator (Mr. Weathers) for [The Weather Games](https://weathergame.reading.ac.uk/)
-Co-organiser for the SNAP international seminar series
+Administrator (Mr. Weathers) for [The Weather Games](https://weathergame.reading.ac.uk/) <br/>
+Co-organiser for the SNAP international seminar series <br/>
 Peer reviewer for Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters,<br/>
 &emsp;&emsp;&emsp; Journal of Climate, Journal of Geophysical Research, Earth's Future
 
@@ -59,10 +59,11 @@ EDUCATION
 CURRENT RESEARCH FOCUSES
 ======
 ------
--	Climate forcing and response to short-lived climate forcers vs. greenhouse gases<br/>
+-	North Atlantic decadal variability <br/>
+-	Global atmospheric oxisiding capability and CH4 lifetime <br/>
 -	Aerosol-cloud-radiation interactions, their uncertainties and associated implications for climate extremes<br/>
--   Dust cycles: interactions with clouds and land surface in present generation climate models<br/>
--   Climate extremes: from past to future; drivers, mechanisms, and impacts<br/>
+- Dust cycles: interactions with clouds and land surface in present generation climate models<br/>
+- Climate extremes: from past to future; drivers, mechanisms, and impacts<br/>
 
 INVITED-TALKS
 ======
