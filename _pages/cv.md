@@ -34,6 +34,14 @@ PROFESSIONAL EXPERIENCE
 &emsp;&emsp;&emsp;Courses: Atmospheric Dynamics (PG); Atmospheric physics (UG); Earth Modelling and Predication (UG); <br/>
 &emsp;&emsp;&emsp;Earth's Atmospheric Composition (UG); Meteorology (UG);<br/>
 
+RESPONSIBILITIES
+======
+------
+Administrator (Mr. Weathers) for [The Weather Games](https://weathergame.reading.ac.uk/)
+Co-organiser for the SNAP international seminar series
+Peer reviewer for Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters,<br/>
+&emsp;&emsp;&emsp; Journal of Climate, Journal of Geophysical Research, Earth's Future
+
 
 EDUCATION
 ======
@@ -55,12 +63,6 @@ CURRENT RESEARCH FOCUSES
 -	Aerosol-cloud-radiation interactions, their uncertainties and associated implications for climate extremes<br/>
 -   Dust cycles: interactions with clouds and land surface in present generation climate models<br/>
 -   Climate extremes: from past to future; drivers, mechanisms, and impacts<br/>
-
-
-PEER-REVIEWER
-======
-------
-Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters, Journal of Climate, Journal of Geophysical Research, Earth's Future 
 
 INVITED-TALKS
 ======
