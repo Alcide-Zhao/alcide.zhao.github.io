@@ -37,8 +37,10 @@ PROFESSIONAL EXPERIENCE
 RESPONSIBILITIES
 ======
 ------
-- Administrator (Mr. Weathers) for [The Weather Games](https://weathergame.reading.ac.uk/) <br/>
-- Co-organiser for the SNAP international seminar series <br/>
+- Administrator (Mr. Weathers, [The Weather Games](https://weathergame.reading.ac.uk/) <br/>
+- Committee member, [RMetS Meetings & Conferences](https://www.rmets.org/)
+- Flying faculty, [NUIST-Reading Academy](https://en_reading.nuist.edu.cn/main.htm)  
+- Co-organiser, the SNAP international seminar series <br/>
 - Peer reviewer for Atmosphere, Atospheric Environment, Climatic Change, Climate Dynamics, Geophysical Research Leters, Journal of Climate, Journal of Geophysical Research, Earth's Future
 
 
