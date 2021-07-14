@@ -17,8 +17,8 @@ Under Preparation & Review
 ------
 
 **Zhao A.** et al., How well do the CMIP6 models simulate dust aerosols? (submitted to ACP) <br/><br/>
-**Zhao A.** et al., The key role of atmospheric absorption in shaping summertime Asian dust climate impacts (under preparation) <br/><br/>
-**Zhao A.** et al., The North-South divide in global air pollution: drivers and impacts (under preparation)<br/><br/>
+**Zhao A.** et al., The key role of atmospheric absorption in shaping summertime Asian dust climate impacts (in preparation) <br/><br/>
+**Zhao A.** et al., The North-South divide in global air pollution: drivers and impacts (in preparation)<br/><br/>
 
 Pandey, A.K., Stevenson, D.S., **Zhao, A**., et al., Evaluating Nitrogen dioxide in UKCA using OMI satellite retrievals over South and East Asia (under preparation) <br/><br/>
 
